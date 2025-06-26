@@ -49,12 +49,12 @@ struct AudioCard: View {
                         .animation(.easeInOut(duration: 0.3), value: isPlaying)
                     
                     Rectangle()
-                        .fill(Color.gray.opacity(0.3))
+                        .fill(Color.grayText.opacity(0.3))
                         .frame(height: 4)
                     
                     Text(formatDuration(item.duration ?? 0))
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }

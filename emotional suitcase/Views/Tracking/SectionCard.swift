@@ -37,7 +37,7 @@ struct SectionCard<Content: View>: View {
                     if let subtitle = subtitle {
                         Text(subtitle)
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                     }
                 }
             }
@@ -56,7 +56,7 @@ struct SectionCard<Content: View>: View {
     VStack(spacing: 15) {
         SectionCard(title: "心情記錄", subtitle: "今天的感受") {
             Text("這裡是卡片內容")
-                .foregroundColor(.gray)
+                .foregroundColor(.grayText)
         }
         
         SectionCard(backgroundColor: AppColors.orange.opacity(0.1)) {

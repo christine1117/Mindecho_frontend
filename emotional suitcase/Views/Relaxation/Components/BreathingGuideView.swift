@@ -10,7 +10,7 @@ struct BreathingGuideView: View {
             // 外層進度環
             Circle()
                 .stroke(
-                    Color.gray.opacity(0.2),
+                    Color.grayText.opacity(0.2),
                     style: StrokeStyle(lineWidth: 8, lineCap: .round)
                 )
                 .frame(width: 220, height: 220)
@@ -153,5 +153,5 @@ struct ParticleEffectView: View {
         )
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+    .background(AppColors.backgroundLight)
 }

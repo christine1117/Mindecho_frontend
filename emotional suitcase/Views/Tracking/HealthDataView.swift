@@ -19,7 +19,7 @@ struct HealthDataView: View {
                             
                             Text("健康指標追蹤")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                         }
                         
                         Spacer()

@@ -11,14 +11,14 @@ struct BiorhythmSettingsView: View {
                 Text("請輸入日期")
                     .font(.title2)
                     .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                     .padding(.top)
                 
                 VStack(alignment: .leading, spacing: 16) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("出生日期")
                             .font(.headline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         DatePicker("", selection: $birthDate, displayedComponents: .date)
                             .datePickerStyle(CompactDatePickerStyle())
@@ -28,7 +28,7 @@ struct BiorhythmSettingsView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("當前日期")
                             .font(.headline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         DatePicker("", selection: $currentDate, displayedComponents: .date)
                             .datePickerStyle(CompactDatePickerStyle())
@@ -45,7 +45,7 @@ struct BiorhythmSettingsView: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
-                .background(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .background(AppColors.brownDeep)
                 .cornerRadius(12)
                 .padding(.horizontal)
                 
@@ -53,37 +53,37 @@ struct BiorhythmSettingsView: View {
                     Text("生理節律解讀")
                         .font(.headline)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     VStack(alignment: .leading, spacing: 8) {
                         Text("身體生理節律 (23天)：影響身心的體力、耐力，以及身心和各種運動機能。")
                             .font(.system(size: 14))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         Text("情緒生理節律 (28天)：影響感性的情緒調節性，情緒控制穩定性，適合社交活動和一般人際互動。")
                             .font(.system(size: 14))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         Text("智力生理節律 (33天)：影響理性的思維能力，邏輯推理，記憶力和學習等認知能力。")
                             .font(.system(size: 14))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                     }
                     .padding()
-                    .background(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.1))
+                    .background(AppColors.brownDeep.opacity(0.1))
                     .cornerRadius(8)
                 }
                 .padding()
                 
                 Spacer()
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationTitle("生理節律計算")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 trailing: Button("✕") {
                     isPresented = false
                 }
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .foregroundColor(AppColors.brownDeep)
             )
         }
     }

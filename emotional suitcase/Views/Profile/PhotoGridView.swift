@@ -49,7 +49,7 @@ struct PhotoCard: View {
                 
                 Text(formatDate(item.date) + (item.description != nil ? " · \(item.description!)" : ""))
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .multilineTextAlignment(.leading)
                 
                 HStack {

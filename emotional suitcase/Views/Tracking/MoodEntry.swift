@@ -21,10 +21,10 @@ enum MoodType: String, CaseIterable, Codable {
     
     var color: Color {  // 現在 Color 類型可以正確識別
         switch self {
-        case .terrible: return .red
+        case .terrible: return .moodAngry
         case .bad: return .orange
         case .neutral: return .yellow
-        case .good: return .green
+        case .good: return .moodCalm
         case .excellent: return .blue
         }
     }

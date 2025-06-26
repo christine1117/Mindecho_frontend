@@ -72,12 +72,12 @@ struct DailyCheckInView: View {
                     Text("歡迎來到情緒行李箱 Emotional Suticase")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     
                     Text("花一分鐘記錄今天的狀態，幫助你更好地了解自己的健康趨勢。")
                         .font(.body)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 20)
                         .padding(.top, 8)
@@ -100,7 +100,7 @@ struct DailyCheckInView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color(red: 0.8, green: 0.4, blue: 0.1))
+                        .background(AppColors.orangeMain)
                         .cornerRadius(12)
                 }
                 .padding(.horizontal, 12)
@@ -110,7 +110,7 @@ struct DailyCheckInView: View {
             Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+        .background(AppColors.backgroundLight)
         .navigationBarItems(trailing: Button("關閉") { isPresented = false })
     }
     
@@ -120,12 +120,12 @@ struct DailyCheckInView: View {
             // 進度條
             VStack(spacing: 8) {
                 ProgressView(value: Double(currentQuestion + 1), total: Double(questions.count))
-                    .progressViewStyle(LinearProgressViewStyle(tint: Color(red: 0.8, green: 0.4, blue: 0.1)))
+                    .progressViewStyle(LinearProgressViewStyle(tint: AppColors.orangeMain))
                     .scaleEffect(x: 1, y: 2, anchor: .center)
                 
                 Text("問題\(currentQuestion + 1)/\(questions.count)")
                     .font(.caption)
-                    .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                    .foregroundColor(AppColors.orangeMain)
             }
             .padding(.horizontal, 32)
             .padding(.top, 20)
@@ -138,12 +138,12 @@ struct DailyCheckInView: View {
                     Text(questions[currentQuestion].title)
                         .font(.title2)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                         .multilineTextAlignment(.center)
                     
                     Text(questions[currentQuestion].subtitle)
                         .font(.subheadline)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                        .foregroundColor(AppColors.brownDeep.opacity(0.7))
                         .multilineTextAlignment(.center)
                 }
                 .padding(.horizontal, 24)
@@ -169,13 +169,13 @@ struct DailyCheckInView: View {
                             Text("上一題")
                                 .font(.subheadline)
                                 .fontWeight(.medium)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 12)
-                                .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+                                .background(AppColors.backgroundLight)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(Color(red: 0.4, green: 0.2, blue: 0.1), lineWidth: 1)
+                                        .stroke(AppColors.brownDeep, lineWidth: 1)
                                 )
                         }
                         .transition(.slide)
@@ -188,7 +188,7 @@ struct DailyCheckInView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 12)
-                            .background(Color(red: 0.8, green: 0.4, blue: 0.1))
+                            .background(AppColors.orangeMain)
                             .cornerRadius(8)
                     }
                     .disabled(answers[currentQuestion] == -1) // 改为检查是否为 -1
@@ -205,7 +205,7 @@ struct DailyCheckInView: View {
             
             Spacer()
         }
-        .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+        .background(AppColors.backgroundLight)
         .navigationBarItems(trailing: Button("關閉") { isPresented = false })
     }
     
@@ -265,16 +265,16 @@ struct MoodButton: View {
                     Text(option.label)
                         .font(.caption)
                         .fontWeight(.medium)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                 }
                 .frame(width: 60, height: 70)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(isSelected ? Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.2) : Color.clear)
+                        .fill(isSelected ? AppColors.orangeMain.opacity(0.2) : Color.clear)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
                                 .stroke(
-                                    isSelected ? Color(red: 0.8, green: 0.4, blue: 0.1) : Color.gray.opacity(0.3),
+                                    isSelected ? AppColors.orangeMain : Color.grayText.opacity(0.3),
                                     lineWidth: isSelected ? 2 : 1
                                 )
                         )

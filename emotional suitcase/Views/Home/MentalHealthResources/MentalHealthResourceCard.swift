@@ -9,7 +9,7 @@ struct MentalHealthResourceCard: View {
             HStack {
                 Image(systemName: resource.icon)
                     .font(.title2)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 Spacer()
             }
             
@@ -18,12 +18,12 @@ struct MentalHealthResourceCard: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(resource.title)
                     .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                     .multilineTextAlignment(.leading)
                 
                 Text(resource.subtitle)
                     .font(.system(size: 11))
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                    .foregroundColor(AppColors.brownDeep.opacity(0.7))
                     .multilineTextAlignment(.leading)
                 
                 Button(action: onTap) {
@@ -32,7 +32,7 @@ struct MentalHealthResourceCard: View {
                         .foregroundColor(.white)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
-                        .background(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .background(AppColors.brownDeep)
                         .cornerRadius(8)
                 }
                 .padding(.top, 4)

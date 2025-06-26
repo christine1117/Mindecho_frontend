@@ -10,12 +10,12 @@ struct HotlineDetailView: View {
                 VStack(spacing: 20) {
                     Image(systemName: "phone.circle.fill")
                         .font(.system(size: 80))
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text("24小時心理諮詢熱線")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     VStack(spacing: 16) {
                         HotlineCard(
@@ -44,7 +44,7 @@ struct HotlineDetailView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("📞 使用提醒")
                             .font(.headline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text("• 所有專線均提供免費諮詢服務")
@@ -53,7 +53,7 @@ struct HotlineDetailView: View {
                             Text("• 專業諮詢師將提供情緒支持與建議")
                         }
                         .font(.body)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     }
                     .padding()
                     .background(Color.white)
@@ -62,7 +62,7 @@ struct HotlineDetailView: View {
                 }
                 .padding()
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationTitle("心理諮詢熱線")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button("關閉") { isPresented = false })
@@ -80,17 +80,17 @@ struct HotlineCard: View {
         HStack(spacing: 16) {
             Image(systemName: icon)
                 .font(.title)
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .foregroundColor(AppColors.brownDeep)
                 .frame(width: 40)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.headline)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 
                 Text(description)
                     .font(.caption)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                    .foregroundColor(AppColors.brownDeep.opacity(0.7))
             }
             
             Spacer()
@@ -106,7 +106,7 @@ struct HotlineCard: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
-                    .background(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .background(AppColors.brownDeep)
                     .cornerRadius(8)
             }
         }
@@ -127,12 +127,12 @@ struct GuideDetailView: View {
                 VStack(spacing: 20) {
                     Image(systemName: "book.circle.fill")
                         .font(.system(size: 80))
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text("心理健康指南")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     VStack(spacing: 16) {
                         GuideCard(
@@ -169,7 +169,7 @@ struct GuideDetailView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("📚 使用說明")
                             .font(.headline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text("• 本指南提供基礎心理健康知識")
@@ -178,7 +178,7 @@ struct GuideDetailView: View {
                             Text("• 定期閱讀有助於提升心理健康意識")
                         }
                         .font(.body)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     }
                     .padding()
                     .background(Color.white)
@@ -187,7 +187,7 @@ struct GuideDetailView: View {
                 }
                 .padding()
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationTitle("心理健康指南")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button("關閉") { isPresented = false })
@@ -204,17 +204,17 @@ struct GuideCard: View {
         HStack(spacing: 16) {
             Image(systemName: icon)
                 .font(.title)
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .foregroundColor(AppColors.brownDeep)
                 .frame(width: 40)
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.headline)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 
                 Text(description)
                     .font(.caption)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                    .foregroundColor(AppColors.brownDeep.opacity(0.7))
             }
             
             Spacer()
@@ -228,7 +228,7 @@ struct GuideCard: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, 16)
                     .padding(.vertical, 6)
-                    .background(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .background(AppColors.brownDeep)
                     .cornerRadius(8)
             }
         }
@@ -249,12 +249,12 @@ struct TechniquesDetailView: View {
                 VStack(spacing: 20) {
                     Image(systemName: "heart.circle.fill")
                         .font(.system(size: 80))
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text("情緒管理技巧")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     VStack(spacing: 16) {
                         TechniqueCard(
@@ -289,7 +289,7 @@ struct TechniquesDetailView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("💡 使用建議")
                             .font(.headline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text("• 選擇適合自己的技巧定期練習")
@@ -298,7 +298,7 @@ struct TechniquesDetailView: View {
                             Text("• 結合多種技巧效果更佳")
                         }
                         .font(.body)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     }
                     .padding()
                     .background(Color.white)
@@ -307,7 +307,7 @@ struct TechniquesDetailView: View {
                 }
                 .padding()
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationTitle("情緒管理技巧")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button("關閉") { isPresented = false })
@@ -326,17 +326,17 @@ struct TechniqueCard: View {
             HStack(spacing: 16) {
                 Image(systemName: icon)
                     .font(.title)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                     .frame(width: 40)
                 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
                         .font(.headline)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text(description)
                         .font(.caption)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                        .foregroundColor(AppColors.brownDeep.opacity(0.7))
                 }
                 
                 Spacer()
@@ -346,19 +346,19 @@ struct TechniqueCard: View {
                 Text("步驟：")
                     .font(.subheadline)
                     .fontWeight(.medium)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 
                 ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
                     HStack(spacing: 8) {
                         Text("\(index + 1).")
                             .font(.caption)
                             .fontWeight(.bold)
-                            .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                            .foregroundColor(AppColors.orangeMain)
                             .frame(width: 20, alignment: .leading)
                         
                         Text(step)
                             .font(.caption)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                     }
                 }
             }
@@ -380,12 +380,12 @@ struct MapDetailView: View {
                 VStack(spacing: 20) {
                     Image(systemName: "location.circle.fill")
                         .font(.system(size: 80))
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text("附近心理診所")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     VStack(spacing: 16) {
                         ClinicCard(
@@ -416,7 +416,7 @@ struct MapDetailView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         Text("🏥 就醫提醒")
                             .font(.headline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         VStack(alignment: .leading, spacing: 8) {
                             Text("• 建議事先電話預約")
@@ -425,7 +425,7 @@ struct MapDetailView: View {
                             Text("• 如需要可請家人陪同")
                         }
                         .font(.body)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     }
                     .padding()
                     .background(Color.white)
@@ -434,7 +434,7 @@ struct MapDetailView: View {
                 }
                 .padding()
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationTitle("附近心理診所")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button("關閉") { isPresented = false })
@@ -455,14 +455,14 @@ struct ClinicCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(name)
                         .font(.headline)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text(distance)
                         .font(.caption)
-                        .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                        .foregroundColor(AppColors.orangeMain)
                         .padding(.horizontal, 8)
                         .padding(.vertical, 2)
-                        .background(Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.2))
+                        .background(AppColors.orangeMain.opacity(0.2))
                         .cornerRadius(4)
                 }
                 
@@ -476,18 +476,18 @@ struct ClinicCard: View {
                     Image(systemName: "phone.fill")
                         .foregroundColor(.white)
                         .padding(8)
-                        .background(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .background(AppColors.brownDeep)
                         .cornerRadius(8)
                 }
             }
             
             Text(address)
                 .font(.subheadline)
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                .foregroundColor(AppColors.brownDeep.opacity(0.7))
             
             Text("專長：\(specialties.joined(separator: "、"))")
                 .font(.caption)
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .foregroundColor(AppColors.brownDeep)
             
             HStack(spacing: 8) {
                 Button(action: {
@@ -498,7 +498,7 @@ struct ClinicCard: View {
                         .foregroundColor(.white)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
-                        .background(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .background(AppColors.brownDeep)
                         .cornerRadius(6)
                 }
                 
@@ -507,13 +507,13 @@ struct ClinicCard: View {
                 }) {
                     Text("預約")
                         .font(.caption)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
                         .background(Color.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 6)
-                                .stroke(Color(red: 0.4, green: 0.2, blue: 0.1), lineWidth: 1)
+                                .stroke(AppColors.brownDeep, lineWidth: 1)
                         )
                 }
             }

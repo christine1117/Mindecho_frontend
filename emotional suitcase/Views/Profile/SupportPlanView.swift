@@ -36,7 +36,7 @@ struct SupportPlanView: View {
                         
                         Text("這些信念和你想前往的理由")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         
                         ForEach(emergencyManager.supportEntries) { entry in
                             SupportEntryCard(
@@ -57,7 +57,7 @@ struct SupportPlanView: View {
                         
                         Text("選擇何時收到你的理由提醒：")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         
                         HStack(spacing: 10) {
                             ReminderButton(title: "每天早上", isSelected: true)
@@ -111,12 +111,12 @@ struct SupportEntryCard: View {
                 
                 Text(entry.content)
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .multilineTextAlignment(.leading)
                 
                 Text(formatEntryDate(entry.date))
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
             }
             
             Spacer()
@@ -179,7 +179,7 @@ struct AddSupportEntryView: View {
                     .frame(height: 150)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                            .stroke(Color.grayText.opacity(0.3), lineWidth: 1)
                     )
                 
                 Button(action: {

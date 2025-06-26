@@ -37,11 +37,11 @@ struct MoodDiaryView: View {
                                 Image(systemName: "square.and.pencil")
                                     .foregroundColor(AppColors.orange)
                                 Text("寫下今天的心情...")
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(.grayText)
                                 Spacer()
                             }
                             .padding()
-                            .background(Color.gray.opacity(0.1))
+                            .background(Color.grayText.opacity(0.1))
                             .cornerRadius(10)
                         }
                         

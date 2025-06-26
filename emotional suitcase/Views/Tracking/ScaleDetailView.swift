@@ -16,7 +16,7 @@ struct ScaleDetailView: View {
                             if let latestRecord = records.first {
                                 HStack {
                                     Text("最新分數:")
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(.grayText)
                                     Spacer()
                                     Text("\(latestRecord.score)")
                                         .font(.title2)
@@ -26,7 +26,7 @@ struct ScaleDetailView: View {
                                 
                                 HStack {
                                     Text("嚴重程度:")
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(.grayText)
                                     Spacer()
                                     Text(latestRecord.severityLevel)
                                         .fontWeight(.medium)
@@ -34,7 +34,7 @@ struct ScaleDetailView: View {
                                 }
                             } else {
                                 Text("尚無測驗記錄")
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(.grayText)
                             }
                         }
                     }

@@ -15,12 +15,12 @@ struct ChatBubbleView: View {
                         .foregroundColor(.white)
                         .padding(.horizontal, 16)
                         .padding(.vertical, 12)
-                        .background(Color(red: 0.8, green: 0.4, blue: 0.1))
+                        .background(AppColors.orangeMain)
                         .cornerRadius(20, corners: [.topLeft, .topRight, .bottomLeft])
                     
                     Text(formatTime(message.timestamp))
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                 }
             } else {
                 HStack(alignment: .top, spacing: 8) {
@@ -39,7 +39,7 @@ struct ChatBubbleView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(message.content)
                             .font(.subheadline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                             .padding(.horizontal, 16)
                             .padding(.vertical, 12)
                             .background(Color.white)
@@ -47,7 +47,7 @@ struct ChatBubbleView: View {
                         
                         Text(formatTime(message.timestamp))
                             .font(.caption2)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                             .padding(.leading, 4)
                     }
                     
@@ -100,5 +100,5 @@ struct RoundedCorner: Shape {
         ))
     }
     .padding()
-    .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+    .background(AppColors.backgroundLight)
 }

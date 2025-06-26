@@ -56,13 +56,13 @@ struct BiorhythmCard: View {
                 Text("生理節律")
                     .font(.headline)
                     .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 
                 Spacer()
                 
                 Button(action: onEditTapped) {
                     Image(systemName: "square.and.pencil")
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                         .font(.title2)
                 }
             }
@@ -76,7 +76,7 @@ struct BiorhythmCard: View {
                         Text(dateFormatter.string(from: currentDate))
                             .font(.headline)
                             .fontWeight(.bold)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         Spacer()
                     }
                     .padding(.bottom, 8)
@@ -162,7 +162,7 @@ struct BiorhythmCard: View {
                             Text("\(month + 1)")
                                 .font(.caption2)
                                 .fontWeight(.bold)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                                 .offset(
                                     x: cos(radians) * radius,
                                     y: sin(radians) * radius
@@ -172,7 +172,7 @@ struct BiorhythmCard: View {
                         // 主指針 - 指向當前日期在一年中的位置
                         let mainPointerAngle = getCurrentPointerAngle()
                         Rectangle()
-                            .fill(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .fill(AppColors.brownDeep)
                             .frame(width: 3, height: 60)
                             .offset(y: -30)
                             .rotationEffect(.degrees(mainPointerAngle * animationProgress))
@@ -180,7 +180,7 @@ struct BiorhythmCard: View {
                         
                         // 中心圓點
                         Circle()
-                            .fill(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .fill(AppColors.brownDeep)
                             .frame(width: 12, height: 12)
                     }
                     .frame(width: 160, height: 160)
@@ -193,7 +193,7 @@ struct BiorhythmCard: View {
                                 .frame(width: 12, height: 4)
                             Text("身體 (外圈)")
                                 .font(.caption2)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                         }
                         HStack(spacing: 4) {
                             Rectangle()
@@ -201,7 +201,7 @@ struct BiorhythmCard: View {
                                 .frame(width: 12, height: 4)
                             Text("情緒 (中圈)")
                                 .font(.caption2)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                         }
                         HStack(spacing: 4) {
                             Rectangle()
@@ -209,7 +209,7 @@ struct BiorhythmCard: View {
                                 .frame(width: 12, height: 4)
                             Text("智力 (內圈)")
                                 .font(.caption2)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                         }
                     }
                 }
@@ -219,17 +219,17 @@ struct BiorhythmCard: View {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
                             Circle()
-                                .fill(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .fill(AppColors.brownDeep)
                                 .frame(width: 8, height: 8)
                             Text("身體狀態：\(toPercentage(physicalBiorhythm))%")
                                 .font(.system(size: 13, weight: .semibold))
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                                 .opacity(animationProgress)
                                 .animation(.easeInOut(duration: 1.0).delay(0.5), value: animationProgress)
                         }
                         Text(getPhysicalDescription(physicalBiorhythm))
                             .font(.system(size: 11))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                             .fixedSize(horizontal: false, vertical: true)
                             .opacity(animationProgress)
                             .animation(.easeInOut(duration: 1.0).delay(0.7), value: animationProgress)
@@ -242,13 +242,13 @@ struct BiorhythmCard: View {
                                 .frame(width: 8, height: 8)
                             Text("情緒狀態：\(toPercentage(emotionalBiorhythm))%")
                                 .font(.system(size: 13, weight: .semibold))
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                                 .opacity(animationProgress)
                                 .animation(.easeInOut(duration: 1.0).delay(0.9), value: animationProgress)
                         }
                         Text(getEmotionalDescription(emotionalBiorhythm))
                             .font(.system(size: 11))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                             .fixedSize(horizontal: false, vertical: true)
                             .opacity(animationProgress)
                             .animation(.easeInOut(duration: 1.0).delay(1.1), value: animationProgress)
@@ -261,13 +261,13 @@ struct BiorhythmCard: View {
                                 .frame(width: 8, height: 8)
                             Text("智力狀態：\(toPercentage(intellectualBiorhythm))%")
                                 .font(.system(size: 13, weight: .semibold))
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                                 .opacity(animationProgress)
                                 .animation(.easeInOut(duration: 1.0).delay(1.3), value: animationProgress)
                         }
                         Text(getIntellectualDescription(intellectualBiorhythm))
                             .font(.system(size: 11))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                             .fixedSize(horizontal: false, vertical: true)
                             .opacity(animationProgress)
                             .animation(.easeInOut(duration: 1.0).delay(1.5), value: animationProgress)

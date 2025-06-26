@@ -46,7 +46,7 @@ struct ChatInputView: View {
             }
             
             Divider()
-                .background(Color.gray.opacity(0.3))
+                .background(Color.grayText.opacity(0.3))
             
             HStack(spacing: 12) {
                 // 附件/快速回覆按鈕
@@ -55,7 +55,7 @@ struct ChatInputView: View {
                 }) {
                     Image(systemName: showingQuickReplies ? "xmark.circle" : "plus.circle")
                         .font(.title2)
-                        .foregroundColor(showingQuickReplies ? .red : .gray)
+                        .foregroundColor(showingQuickReplies ? .moodAngry : .grayText)
                 }
                 
                 // 輸入框
@@ -71,7 +71,7 @@ struct ChatInputView: View {
                     if messageText.count > 100 {
                         Text("\(messageText.count)")
                             .font(.caption2)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                     }
                 }
                 .padding(.horizontal, 16)
@@ -81,7 +81,7 @@ struct ChatInputView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(
-                            isComposing ? mode.color.opacity(0.5) : Color.gray.opacity(0.3),
+                            isComposing ? mode.color.opacity(0.5) : Color.grayText.opacity(0.3),
                             lineWidth: isComposing ? 2 : 1
                         )
                 )
@@ -94,7 +94,7 @@ struct ChatInputView: View {
                 }) {
                     Image(systemName: isComposing ? "arrow.up.circle.fill" : "arrow.up.circle")
                         .font(.title2)
-                        .foregroundColor(isComposing ? mode.color : .gray)
+                        .foregroundColor(isComposing ? mode.color : .grayText)
                 }
                 .disabled(messageText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 .scaleEffect(isComposing ? 1.1 : 1.0)
@@ -103,7 +103,7 @@ struct ChatInputView: View {
             .padding(.horizontal, 16)
             .padding(.vertical, 12)
         }
-        .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+        .background(AppColors.backgroundLight)
     }
 }
 
@@ -149,7 +149,7 @@ struct QuickReplyView: View {
             }
         }
         .padding(.vertical, 8)
-        .background(Color(red: 0.996, green: 0.953, blue: 0.780).opacity(0.5))
+        .background(AppColors.backgroundLight.opacity(0.5))
     }
 }
 
@@ -168,5 +168,5 @@ struct QuickReplyView: View {
         )
     }
     .padding()
-    .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+    .background(AppColors.backgroundLight)
 }

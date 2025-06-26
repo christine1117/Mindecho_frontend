@@ -26,7 +26,7 @@ struct ScaleHistoryList: View {
                             
                             Text(dateFormatter.string(from: record.date))
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                         }
                         
                         Spacer()
@@ -39,11 +39,11 @@ struct ScaleHistoryList: View {
                             
                             Text(record.severityLevel)
                                 .font(.caption2)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                         }
                         
                         Image(systemName: "chevron.right")
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                             .font(.caption)
                     }
                     .padding()

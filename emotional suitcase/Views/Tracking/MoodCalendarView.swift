@@ -44,7 +44,7 @@ struct MoodCalendarView: View {
                     Text(day)
                         .font(.caption)
                         .fontWeight(.medium)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                         .frame(maxWidth: .infinity)
                 }
             }

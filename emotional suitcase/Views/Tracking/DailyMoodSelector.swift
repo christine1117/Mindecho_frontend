@@ -21,7 +21,7 @@ struct DailyMoodSelector: View {
                             
                             Text(mood.rawValue)
                                 .font(.caption2)
-                                .foregroundColor(selectedMood == mood ? mood.color : .gray)
+                                .foregroundColor(selectedMood == mood ? mood.color : .grayText)
                                 .fontWeight(selectedMood == mood ? .bold : .regular)
                         }
                         .frame(maxWidth: .infinity)
@@ -39,7 +39,7 @@ struct DailyMoodSelector: View {
             if selectedMood != .neutral {
                 Text("今天選擇了「\(selectedMood.rawValue)」")
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .transition(.opacity)
             }
         }

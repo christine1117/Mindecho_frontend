@@ -101,7 +101,7 @@ struct ChatDetailView: View {
                 mode: selectedMode
             )
         }
-        .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+        .background(AppColors.backgroundLight)
         .navigationBarHidden(true)
         .overlay(
             // 模式切換確認對話框
@@ -195,7 +195,7 @@ struct ChatHeaderView: View {
                         Text("返回")
                             .font(.subheadline)
                     }
-                    .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                    .foregroundColor(AppColors.orangeMain)
                 }
                 
                 Spacer()
@@ -204,12 +204,12 @@ struct ChatHeaderView: View {
                     Text(session.title)
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                         .lineLimit(1)
                     
                     Text("最後活動: \(formatRelativeTime(session.lastUpdated))")
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(AppColors.grayTextText)
                 }
                 
                 Spacer()
@@ -235,11 +235,11 @@ struct ChatHeaderView: View {
                     }) {
                         Label("清除對話", systemImage: "trash")
                     }
-                    .foregroundColor(.red)
+                    .foregroundColor(AppColors.moodAngry)
                 } label: {
                     Image(systemName: "ellipsis.circle")
                         .font(.title3)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                 }
             }
             .padding(.horizontal, 16)
@@ -308,7 +308,7 @@ struct TypingIndicatorView: View {
         HStack(spacing: 4) {
             ForEach(0..<3) { index in
                 Circle()
-                    .fill(Color.gray)
+                    .fill(Color.grayText)
                     .frame(width: 8, height: 8)
                     .scaleEffect(animationOffset == CGFloat(index) ? 1.2 : 0.8)
                     .opacity(animationOffset == CGFloat(index) ? 1.0 : 0.5)

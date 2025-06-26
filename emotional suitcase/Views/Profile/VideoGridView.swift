@@ -49,7 +49,7 @@ struct VideoCard: View {
                 
                 Text(item.description ?? "")
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                 
                 HStack {
                     Button(action: {}) {

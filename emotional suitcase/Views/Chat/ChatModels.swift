@@ -33,8 +33,8 @@ enum TherapyMode: String, CaseIterable, Codable {
     
     var color: Color {
         switch self {
-        case .chatMode: return Color(red: 0.8, green: 0.4, blue: 0.1)
-        case .cbtMode: return Color(red: 0.4, green: 0.2, blue: 0.1)
+        case .chatMode: return AppColors.orangeMain
+        case .cbtMode: return AppColors.brownDeep
         case .mbtMode: return Color(red: 0.6, green: 0.3, blue: 0.1)
         }
     }

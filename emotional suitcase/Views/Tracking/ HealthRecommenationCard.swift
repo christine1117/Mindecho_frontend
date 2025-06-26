@@ -20,7 +20,7 @@ struct HealthRecommendationCard: View {
             
             Text("建議增加每日步行量，保持良好的睡眠習慣有助於改善心率變異性。")
                 .font(.caption)
-                .foregroundColor(.gray)
+                .foregroundColor(.grayText)
                 .multilineTextAlignment(.leading)
             
             Button(action: onViewMore) {

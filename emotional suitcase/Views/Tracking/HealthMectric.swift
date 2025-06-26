@@ -27,9 +27,9 @@ enum HealthMetricType: String, CaseIterable, Codable {
     
     var color: Color {
         switch self {
-        case .heartRateVariability: return .red
+        case .heartRateVariability: return .moodAngry
         case .sleepQuality: return .blue
-        case .activityLevel: return .green
+        case .activityLevel: return .moodCalm
         case .weight: return .purple
         }
     }

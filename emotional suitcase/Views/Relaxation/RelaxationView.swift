@@ -19,7 +19,7 @@ struct RelaxationView: View {
                             Image(systemName: "chevron.left")
                                 .font(.title3)
                                 .fontWeight(.medium)
-                                .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                                .foregroundColor(AppColors.orangeMain)
                         }
                         .frame(width: 44, height: 44)
                         
@@ -29,11 +29,11 @@ struct RelaxationView: View {
                             Text("放鬆")
                                 .font(.title2)
                                 .fontWeight(.bold)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                             
                             Text("遠離喧囂與呼吸，放鬆身心")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(AppColors.grayTextText)
                         }
                         
                         Spacer()
@@ -45,7 +45,7 @@ struct RelaxationView: View {
                     .padding(.horizontal, 20)
                     .padding(.vertical, 16)
                 }
-                .background(Color.white)
+                .background(AppColors.backgroundLight)
                 
                 // 模式選擇
                 HStack(spacing: 0) {
@@ -59,7 +59,7 @@ struct RelaxationView: View {
                                 Text(mode.displayName)
                                     .font(.subheadline)
                                     .fontWeight(.medium)
-                                    .foregroundColor(selectedMode == mode ? mode.color : .gray)
+                                    .foregroundColor(selectedMode == mode ? mode.color : .grayText)
                                 
                                 Rectangle()
                                     .fill(selectedMode == mode ? mode.color : Color.clear)
@@ -132,8 +132,8 @@ struct RelaxationView: View {
                             .fill(
                                 LinearGradient(
                                     gradient: Gradient(colors: [
-                                        Color.white.opacity(0.8),
-                                        Color.white.opacity(0.4)
+                                        AppColors.white.opacity(0.8),
+                                        AppColors.white.opacity(0.4)
                                     ]),
                                     startPoint: .topLeading,
                                     endPoint: .bottomTrailing
@@ -165,7 +165,7 @@ struct RelaxationView: View {
                             .frame(width: 100, height: 50)
                             .background(
                                 RoundedRectangle(cornerRadius: 12)
-                                    .fill(Color.white)
+                                    .fill(AppColors.white)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 12)
                                             .stroke(selectedMode.color, lineWidth: 2)
@@ -198,7 +198,7 @@ struct RelaxationView: View {
                 }
                 .padding(.bottom, 40)
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationBarHidden(true)
             .overlay(
                 // HRV 連接按鈕（右下角浮動）
@@ -221,13 +221,13 @@ struct RelaxationView: View {
                                         .font(.subheadline)
                                         .fontWeight(.medium)
                                 }
-                                .foregroundColor(.white)
+                                .foregroundColor(AppColors.white)
                                 .padding(.horizontal, 16)
                                 .padding(.vertical, 12)
                                 .background(
                                     RoundedRectangle(cornerRadius: 25)
-                                        .fill(Color(red: 0.8, green: 0.4, blue: 0.1))
-                                        .shadow(color: Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.4), radius: 8, x: 0, y: 4)
+                                        .fill(AppColors.orangeMain)
+                                        .shadow(color: AppColors.orangeMain.opacity(0.4), radius: 8, x: 0, y: 4)
                                 )
                             }
                             .padding(.trailing, 20)
@@ -247,13 +247,13 @@ struct RelaxationView: View {
                                         .font(.subheadline)
                                         .fontWeight(.medium)
                                 }
-                                .foregroundColor(.white)
+                                .foregroundColor(AppColors.white)
                                 .padding(.horizontal, 16)
                                 .padding(.vertical, 12)
                                 .background(
                                     RoundedRectangle(cornerRadius: 25)
-                                        .fill(Color.green)
-                                        .shadow(color: Color.green.opacity(0.4), radius: 8, x: 0, y: 4)
+                                        .fill(Color.moodCalm)
+                                        .shadow(color: Color.moodCalm.opacity(0.4), radius: 8, x: 0, y: 4)
                                 )
                             }
                             .padding(.trailing, 20)

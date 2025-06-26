@@ -16,7 +16,7 @@ struct HealthRecommendationView: View {
                                 icon: "heart.fill",
                                 title: "心率變異性改善",
                                 description: "建議進行深呼吸練習和冥想，有助於提升心率變異性。",
-                                color: .red
+                                color: .moodAngry
                             )
                             
                             RecommendationItem(
@@ -30,7 +30,7 @@ struct HealthRecommendationView: View {
                                 icon: "figure.walk",
                                 title: "活動量提升",
                                 description: "建議每天增加2000步，可以選擇走樓梯或散步。",
-                                color: .green
+                                color: .moodCalm
                             )
                         }
                     }
@@ -84,7 +84,7 @@ struct RecommendationItem: View {
                 
                 Text(description)
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .multilineTextAlignment(.leading)
             }
         }
@@ -111,7 +111,7 @@ struct HealthGoalItem: View {
                 
                 Text("\(current, specifier: "%.0f")/\(target, specifier: "%.0f")")
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
             }
             
             ProgressView(value: progress)

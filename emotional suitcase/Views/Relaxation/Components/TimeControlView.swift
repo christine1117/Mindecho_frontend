@@ -15,7 +15,7 @@ struct TimerControlView: View {
                 // 剩餘時間
                 Text(timerManager.formattedTimeRemaining)
                     .font(.system(size: 48, weight: .light, design: .rounded))
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                     .monospacedDigit()
                 
                 // 進度條
@@ -23,7 +23,7 @@ struct TimerControlView: View {
                     HStack {
                         Text("進度")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         
                         Spacer()
                         
@@ -38,7 +38,7 @@ struct TimerControlView: View {
                             LinearProgressViewStyle(tint: configuration.mode.color)
                         )
                         .frame(height: 8)
-                        .background(Color.gray.opacity(0.2))
+                        .background(Color.grayText.opacity(0.2))
                         .cornerRadius(4)
                 }
                 .padding(.horizontal, 20)
@@ -57,11 +57,11 @@ struct TimerControlView: View {
                     VStack(spacing: 8) {
                         Image(systemName: "xmark")
                             .font(.title2)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         
                         Text("取消")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                     }
                     .frame(width: 60, height: 60)
                     .background(
@@ -69,7 +69,7 @@ struct TimerControlView: View {
                             .fill(Color.white)
                             .overlay(
                                 Circle()
-                                    .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                                    .stroke(Color.grayText.opacity(0.3), lineWidth: 1)
                             )
                     )
                 }
@@ -207,7 +207,7 @@ struct TimeAdjustmentView: View {
             Text("調整時間")
                 .font(.subheadline)
                 .fontWeight(.medium)
-                .foregroundColor(.gray)
+                .foregroundColor(.grayText)
             
             HStack(spacing: 20) {
                 // 減少時間
@@ -233,7 +233,7 @@ struct TimeAdjustmentView: View {
                     
                     Text("分鐘")
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                 }
                 .frame(width: 80)
                 
@@ -283,7 +283,7 @@ struct TimeAdjustmentView: View {
                 .fill(Color.white.opacity(0.8))
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                        .stroke(Color.grayText.opacity(0.2), lineWidth: 1)
                 )
         )
     }
@@ -303,5 +303,5 @@ struct TimeAdjustmentView: View {
         )
         .padding()
     }
-    .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+    .background(AppColors.backgroundLight)
 }

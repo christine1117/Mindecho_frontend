@@ -30,20 +30,20 @@ struct RFQ8TestView: View {
             } else {
                 VStack(spacing: 20) {
                     ProgressView(value: Double(currentQuestion + 1), total: Double(questions.count))
-                        .progressViewStyle(LinearProgressViewStyle(tint: Color(red: 0.4, green: 0.2, blue: 0.1)))
+                        .progressViewStyle(LinearProgressViewStyle(tint: AppColors.brownDeep))
                     
                     Text("第 \(currentQuestion + 1) 題，共 \(questions.count) 題")
                         .font(.caption)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                        .foregroundColor(AppColors.brownDeep.opacity(0.7))
                     
                     VStack(alignment: .leading, spacing: 16) {
                         Text("請根據您的實際情況選擇最符合的選項：")
                             .font(.subheadline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         Text(questions[currentQuestion])
                             .font(.headline)
-                            .foregroundColor(.red)
+                            .foregroundColor(.moodAngry)
                             .multilineTextAlignment(.leading)
                     }
                     
@@ -56,19 +56,19 @@ struct RFQ8TestView: View {
                                     HStack {
                                         Text(options[index])
                                             .font(.body)
-                                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                            .foregroundColor(AppColors.brownDeep)
                                         Spacer()
                                         
                                         VStack(alignment: .trailing, spacing: 2) {
                                             if isRFQCQuestion(currentQuestion) {
                                                 Text("C:\(getRFQCScore(for: index))")
                                                     .font(.caption)
-                                                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.6))
+                                                    .foregroundColor(AppColors.brownDeep.opacity(0.6))
                                             }
                                             if isRFQUQuestion(currentQuestion) {
                                                 Text("U:\(getRFQUScore(for: index))")
                                                     .font(.caption)
-                                                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.6))
+                                                    .foregroundColor(AppColors.brownDeep.opacity(0.6))
                                             }
                                         }
                                     }
@@ -84,7 +84,7 @@ struct RFQ8TestView: View {
                     Spacer()
                 }
                 .padding()
-                .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+                .background(AppColors.backgroundLight)
                 .navigationTitle("RFQ-8 反思功能量表")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: Button("取消") { isPresented = false })

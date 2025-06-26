@@ -13,7 +13,7 @@ struct FiveIndicatorsCard: View {
                 Text("五項指標追蹤")
                     .font(.headline)
                     .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
 
                 Spacer()
 
@@ -29,21 +29,21 @@ struct FiveIndicatorsCard: View {
                     HStack(spacing: 4) {
                         Text(selectedTimePeriod)
                             .font(.caption)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                            .foregroundColor(AppColors.brownDeep.opacity(0.7))
                         Image(systemName: "chevron.down")
                             .font(.caption2)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                            .foregroundColor(AppColors.brownDeep.opacity(0.7))
                     }
                 }
             }
 
             // 圖例
             HStack(spacing: 12) {
-                indicatorLegend(name: "生理", color: .red)
+                indicatorLegend(name: "生理", color: .moodAngry)
                 indicatorLegend(name: "心情", color: .blue)
                 indicatorLegend(name: "睡眠", color: .purple)
                 indicatorLegend(name: "精神", color: .orange)
-                indicatorLegend(name: "食慾", color: .green)
+                indicatorLegend(name: "食慾", color: .moodCalm)
             }
 
             // 圖表和標籤組合
@@ -65,12 +65,12 @@ struct FiveIndicatorsCard: View {
                                 path.addLine(to: CGPoint(x: width, y: y))
                             }
                         }
-                        .stroke(Color.gray.opacity(0.1), lineWidth: 0.5)
+                        .stroke(Color.grayText.opacity(0.1), lineWidth: 0.5)
                         
                         // 生理指標線條
                         createIndicatorLine(
                             data: checkInManager.getDataForPeriod(selectedTimePeriod, indicator: .physical),
-                            color: .red,
+                            color: .moodAngry,
                             width: width,
                             height: height,
                             dayWidth: dayWidth
@@ -106,7 +106,7 @@ struct FiveIndicatorsCard: View {
                         // 食慾指標線條
                         createIndicatorLine(
                             data: checkInManager.getDataForPeriod(selectedTimePeriod, indicator: .appetite),
-                            color: .green,
+                            color: .moodCalm,
                             width: width,
                             height: height,
                             dayWidth: dayWidth
@@ -117,13 +117,13 @@ struct FiveIndicatorsCard: View {
                             VStack {
                                 Image(systemName: "chart.line.uptrend.xyaxis")
                                     .font(.system(size: 40))
-                                    .foregroundColor(.gray.opacity(0.3))
+                                    .foregroundColor(.grayText.opacity(0.3))
                                 Text("暫無數據")
                                     .font(.caption)
-                                    .foregroundColor(.gray.opacity(0.6))
+                                    .foregroundColor(.grayText.opacity(0.6))
                                 Text("完成每日檢測後查看趨勢")
                                     .font(.caption2)
-                                    .foregroundColor(.gray.opacity(0.5))
+                                    .foregroundColor(.grayText.opacity(0.5))
                             }
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                         }
@@ -140,10 +140,10 @@ struct FiveIndicatorsCard: View {
                             VStack(spacing: 1) {
                                 Text(parts.first ?? "")
                                     .font(.caption2)
-                                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.6))
+                                    .foregroundColor(AppColors.brownDeep.opacity(0.6))
                                 Text(parts.last ?? "")
                                     .font(.caption2)
-                                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                    .foregroundColor(AppColors.brownDeep)
                                     .fontWeight(.medium)
                             }
                             .frame(maxWidth: .infinity, minHeight: 24)
@@ -151,7 +151,7 @@ struct FiveIndicatorsCard: View {
                             // 本週：單行顯示
                             Text(day)
                                 .font(.caption2)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                                 .frame(maxWidth: .infinity, minHeight: 24)
                                 .lineLimit(1)
                         }
@@ -176,7 +176,7 @@ struct FiveIndicatorsCard: View {
                 .frame(width: 6, height: 6)
             Text(name)
                 .font(.caption2)
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.8))
+                .foregroundColor(AppColors.brownDeep.opacity(0.8))
         }
     }
     
@@ -227,5 +227,5 @@ struct FiveIndicatorsCard: View {
 #Preview {
     FiveIndicatorsCard(selectedTimePeriod: .constant("本週"))
         .padding()
-        .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+        .background(AppColors.backgroundLight)
 }

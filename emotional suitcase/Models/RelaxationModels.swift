@@ -23,7 +23,7 @@ enum RelaxationMode: String, CaseIterable, Codable {
     var color: Color {
         switch self {
         case .breathing: return Color(red: 0.9, green: 0.6, blue: 0.2)
-        case .meditation: return Color(red: 0.8, green: 0.4, blue: 0.1)
+        case .meditation: return AppColors.orangeMain
         }
     }
     
@@ -72,8 +72,8 @@ enum BreathingPhase: String, CaseIterable, Codable {
         switch self {
         case .inhale: return Color.blue.opacity(0.7)
         case .hold: return Color.purple.opacity(0.7)
-        case .exhale: return Color.green.opacity(0.7)
-        case .pause: return Color.gray.opacity(0.5)
+        case .exhale: return Color.moodCalm.opacity(0.7)
+        case .pause: return Color.grayText.opacity(0.5)
         }
     }
 }
@@ -218,10 +218,10 @@ struct HRVDataPoint: Identifiable, Codable {
         
         var color: Color {
             switch self {
-            case .poor: return .red
+            case .poor: return .moodAngry
             case .fair: return .orange
             case .good: return .yellow
-            case .excellent: return .green
+            case .excellent: return .moodCalm
             }
         }
         

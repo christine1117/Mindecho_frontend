@@ -19,8 +19,8 @@ struct MeditationView: View {
             // 背景漸層
             LinearGradient(
                 gradient: Gradient(colors: [
-                    Color(red: 0.996, green: 0.953, blue: 0.780),
-                    Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.2)
+                    Color(AppColors.backgroundLight),
+                    Color(AppColors.orangeMain).opacity(0.2)
                 ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -36,9 +36,9 @@ struct MeditationView: View {
                     }) {
                         Image(systemName: "xmark")
                             .font(.title3)
-                            .foregroundColor(.gray)
+                            .foregroundColor(AppColors.grayTextText)
                             .padding(12)
-                            .background(Circle().fill(Color.white.opacity(0.8)))
+                            .background(Circle().fill(AppColors.white.opacity(0.8)))
                     }
                     
                     Spacer()
@@ -47,11 +47,11 @@ struct MeditationView: View {
                         Text("冥想練習")
                             .font(.headline)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         Text("專注當下，放鬆身心")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(AppColors.grayTextText)
                     }
                     
                     Spacer()
@@ -71,12 +71,12 @@ struct MeditationView: View {
                                         .lineLimit(1)
                                 }
                             }
-                            .foregroundColor(.gray)
+                            .foregroundColor(AppColors.grayTextText)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 8)
                             .background(
                                 RoundedRectangle(cornerRadius: 20)
-                                    .fill(Color.white.opacity(0.8))
+                                    .fill(AppColors.white.opacity(0.8))
                             )
                         }
                         
@@ -90,15 +90,15 @@ struct MeditationView: View {
                         }) {
                             Image(systemName: timerManager.timerState == .running ? "pause" : "play")
                                 .font(.title3)
-                                .foregroundColor(.gray)
+                                .foregroundColor(AppColors.grayTextText)
                                 .padding(12)
-                                .background(Circle().fill(Color.white.opacity(0.8)))
+                                .background(Circle().fill(AppColors.white.opacity(0.8)))
                         }
                     }
                 }
                 .padding(.horizontal, 20)
                 .padding(.vertical, 16)
-                .background(Color.white)
+                .background(AppColors.white)
                 
                 Spacer()
                 
@@ -107,7 +107,7 @@ struct MeditationView: View {
                     // 時間顯示
                     Text(timerManager.formattedTimeRemaining)
                         .font(.system(size: 48, weight: .light, design: .rounded))
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                         .monospacedDigit()
                     
                     // 冥想視覺元素
@@ -116,7 +116,7 @@ struct MeditationView: View {
                         ForEach(0..<3) { index in
                             Circle()
                                 .stroke(
-                                    Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.3 - Double(index) * 0.1),
+                                    Color(AppColors.orangeMain).opacity(0.3 - Double(index) * 0.1),
                                     lineWidth: 2
                                 )
                                 .frame(width: 200 + CGFloat(index) * 40, height: 200 + CGFloat(index) * 40)
@@ -134,8 +134,8 @@ struct MeditationView: View {
                             .fill(
                                 RadialGradient(
                                     gradient: Gradient(colors: [
-                                        Color.white,
-                                        Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.3)
+                                        AppColors.white,
+                                        Color(AppColors.orangeMain).opacity(0.3)
                                     ]),
                                     center: .center,
                                     startRadius: 20,
@@ -143,12 +143,12 @@ struct MeditationView: View {
                                 )
                             )
                             .frame(width: 200, height: 200)
-                            .shadow(color: Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.3), radius: 20)
+                            .shadow(color: Color(AppColors.orangeMain).opacity(0.3), radius: 20)
                         
                         // 中心圖標
                         Image(systemName: "leaf")
                             .font(.system(size: 40))
-                            .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                            .foregroundColor(AppColors.orangeMain)
                     }
                     
                     // 引導文字（固定高度避免重疊）
@@ -156,14 +156,14 @@ struct MeditationView: View {
                         Text(getCurrentGuidanceText())
                             .font(.title3)
                             .fontWeight(.medium)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 40)
                             .frame(height: 60)
                         
                         // 進度條
                         ProgressView(value: timerManager.progress)
-                            .progressViewStyle(LinearProgressViewStyle(tint: Color(red: 0.8, green: 0.4, blue: 0.1)))
+                            .progressViewStyle(LinearProgressViewStyle(tint: AppColors.orangeMain))
                             .frame(width: 200)
                     }
                 }
@@ -177,7 +177,7 @@ struct MeditationView: View {
                             Text("心率變異性")
                                 .font(.subheadline)
                                 .fontWeight(.medium)
-                                .foregroundColor(.gray)
+                                .foregroundColor(AppColors.grayTextText)
                             
                             Spacer()
                             
@@ -188,7 +188,7 @@ struct MeditationView: View {
                             }) {
                                 Image(systemName: "xmark.circle")
                                     .font(.caption)
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(AppColors.grayTextText)
                             }
                             
                             HStack(spacing: 8) {
@@ -198,7 +198,7 @@ struct MeditationView: View {
                                 
                                 Text(hrvManager.hrvTrend.description)
                                     .font(.caption)
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(AppColors.grayTextText)
                             }
                         }
                         
@@ -216,32 +216,32 @@ struct MeditationView: View {
                         VStack(spacing: 4) {
                             Text("平均HRV")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(AppColors.grayTextText)
                             Text(String(format: "%.1f", hrvManager.averageHRV))
                                 .font(.headline)
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                         }
                     }
                     
                     VStack(spacing: 4) {
                         Text("冥想時間")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(AppColors.grayTextText)
                         Text(formatElapsedTime())
                             .font(.headline)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                     }
                     
                     VStack(spacing: 4) {
                         Text("完成度")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(AppColors.grayTextText)
                         Text(String(format: "%.0f%%", timerManager.progress * 100))
                             .font(.headline)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                     }
                 }
                 .padding(.bottom, 100) // 給右下角按鈕留空間
@@ -269,13 +269,13 @@ struct MeditationView: View {
                                     .font(.subheadline)
                                     .fontWeight(.medium)
                             }
-                            .foregroundColor(.white)
+                            .foregroundColor(AppColors.white)
                             .padding(.horizontal, 16)
                             .padding(.vertical, 12)
                             .background(
                                 RoundedRectangle(cornerRadius: 25)
-                                    .fill(Color(red: 0.8, green: 0.4, blue: 0.1))
-                                    .shadow(color: Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.4), radius: 8, x: 0, y: 4)
+                                    .fill(Color(AppColors.orangeMain))
+                                    .shadow(color: Color(AppColors.orangeMain).opacity(0.4), radius: 8, x: 0, y: 4)
                             )
                         }
                         .padding(.trailing, 20)
@@ -296,13 +296,13 @@ struct MeditationView: View {
                                     .font(.subheadline)
                                     .fontWeight(.medium)
                             }
-                            .foregroundColor(.white)
+                            .foregroundColor(AppColors.white)
                             .padding(.horizontal, 16)
                             .padding(.vertical, 12)
                             .background(
                                 RoundedRectangle(cornerRadius: 25)
-                                    .fill(showHRV ? Color.green : Color(red: 0.8, green: 0.4, blue: 0.1))
-                                    .shadow(color: (showHRV ? Color.green : Color(red: 0.8, green: 0.4, blue: 0.1)).opacity(0.4), radius: 8, x: 0, y: 4)
+                                    .fill(showHRV ? Color(AppColors.moodCalm) : Color(AppColors.orangeMain))
+                                    .shadow(color: (showHRV ? Color(AppColors.moodCalm) : Color(AppColors.orangeMain)).opacity(0.4), radius: 8, x: 0, y: 4)
                             )
                         }
                         .padding(.trailing, 20)
@@ -433,7 +433,7 @@ struct MusicSelectorView: View {
                 Text("選擇背景音樂")
                     .font(.title2)
                     .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                     .padding(.top, 20)
                 
                 VStack(spacing: 16) {
@@ -445,29 +445,29 @@ struct MusicSelectorView: View {
                             HStack(spacing: 16) {
                                 Image(systemName: music.icon)
                                     .font(.title2)
-                                    .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                                    .foregroundColor(AppColors.orangeMain)
                                     .frame(width: 40)
                                 
                                 Text(music.displayName)
                                     .font(.headline)
-                                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                    .foregroundColor(AppColors.brownDeep)
                                 
                                 Spacer()
                                 
                                 if selectedMusic == music {
                                     Image(systemName: "checkmark.circle.fill")
                                         .font(.title2)
-                                        .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                                        .foregroundColor(AppColors.orangeMain)
                                 }
                             }
                             .padding(16)
                             .background(
                                 RoundedRectangle(cornerRadius: 12)
-                                    .fill(Color.white)
+                                    .fill(AppColors.white)
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 12)
                                             .stroke(
-                                                selectedMusic == music ? Color(red: 0.8, green: 0.4, blue: 0.1) : Color.gray.opacity(0.3),
+                                                selectedMusic == music ? AppColors.orangeMain : AppColors.grayTextText.opacity(0.3),
                                                 lineWidth: selectedMusic == music ? 2 : 1
                                             )
                                     )
@@ -480,7 +480,7 @@ struct MusicSelectorView: View {
                 
                 Spacer()
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 trailing: Button("完成") {

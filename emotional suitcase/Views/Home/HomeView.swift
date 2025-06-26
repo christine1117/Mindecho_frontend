@@ -52,7 +52,7 @@ struct HomeView: View {
                     HStack(spacing: 8) {
                         ForEach(0..<2, id: \.self) { index in
                             Circle()
-                                .fill(currentPage == index ? Color(red: 0.4, green: 0.2, blue: 0.1) : Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.3))
+                                .fill(currentPage == index ? AppColors.brownDeep : AppColors.brownDeep.opacity(0.3))
                                 .frame(width: 8, height: 8)
                         }
                     }
@@ -102,7 +102,7 @@ struct HomeView: View {
                         .padding(.bottom, 20)
                 }
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationTitle("首頁")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(Color.white, for: .navigationBar)
@@ -126,7 +126,7 @@ struct HomeView: View {
                         }
                     } label: {
                         Image(systemName: "hammer.fill")
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                     }
                 }
             }
@@ -201,8 +201,8 @@ struct DailyCheckInReminderCard: View {
             .background(
                 LinearGradient(
                     colors: [
-                        Color(red: 0.8, green: 0.4, blue: 0.1),
-                        Color(red: 0.9, green: 0.5, blue: 0.2)
+                        AppColors.orangeMain,
+                        AppColors.orange
                     ],
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing

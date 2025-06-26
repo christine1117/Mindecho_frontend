@@ -43,7 +43,7 @@ struct MentalHealthResourcesSection: View {
                 Text("心理健康資源")
                     .font(.headline)
                     .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                     .padding(.leading, 16)
                 Spacer()
             }

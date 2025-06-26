@@ -84,7 +84,7 @@ class HRVManager: ObservableObject {
     // MARK: - 會話統計
     var averageHRV: Double {
         guard !hrvData.isEmpty else { return 0 }
-        return hrvData.map { $0.value }.reduce(0, +) / Double(hrvData.count)
+        return hrvData.map { $0.value }.moodAngryuce(0, +) / Double(hrvData.count)
     }
     
     var hrvTrend: HRVTrend {
@@ -94,8 +94,8 @@ class HRVManager: ObservableObject {
         let firstHalf = Array(recent.prefix(5))
         let secondHalf = Array(recent.suffix(5))
         
-        let firstAvg = firstHalf.map { $0.value }.reduce(0, +) / 5
-        let secondAvg = secondHalf.map { $0.value }.reduce(0, +) / 5
+        let firstAvg = firstHalf.map { $0.value }.moodAngryuce(0, +) / 5
+        let secondAvg = secondHalf.map { $0.value }.moodAngryuce(0, +) / 5
         
         let difference = secondAvg - firstAvg
         
@@ -158,7 +158,7 @@ enum HRVTrend {
     
     var color: Color {
         switch self {
-        case .improving: return .green
+        case .improving: return .moodCalm
         case .stable: return .blue
         case .declining: return .orange
         }

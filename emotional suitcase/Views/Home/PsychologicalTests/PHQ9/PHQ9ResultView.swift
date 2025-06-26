@@ -30,26 +30,26 @@ struct PHQ9ResultView: View {
         VStack(spacing: 20) {
             Image(systemName: "heart.circle.fill")
                 .font(.system(size: 60))
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .foregroundColor(AppColors.brownDeep)
             
             Text("PHQ-9 測試完成")
                 .font(.title)
                 .fontWeight(.bold)
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .foregroundColor(AppColors.brownDeep)
             
             VStack(spacing: 12) {
                 Text("您的憂鬱指數")
                     .font(.headline)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 
                 Text("\(score)/27")
                     .font(.system(size: 48, weight: .bold))
-                    .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                    .foregroundColor(AppColors.orangeMain)
                 
                 Text(depressionLevel)
                     .font(.title2)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
             }
             .padding()
             .background(Color.white)
@@ -58,7 +58,7 @@ struct PHQ9ResultView: View {
             
             Text(recommendation)
                 .font(.body)
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .foregroundColor(AppColors.brownDeep)
                 .multilineTextAlignment(.center)
                 .padding()
                 .background(Color.white)
@@ -69,14 +69,14 @@ struct PHQ9ResultView: View {
                 VStack(spacing: 8) {
                     Text("⚠️ 重要提醒")
                         .font(.headline)
-                        .foregroundColor(.red)
+                        .foregroundColor(.moodAngry)
                     Text("您的測試結果顯示可能有較嚴重的憂鬱症狀，建議盡快尋求專業醫療協助。")
                         .font(.body)
-                        .foregroundColor(.red)
+                        .foregroundColor(.moodAngry)
                         .multilineTextAlignment(.center)
                 }
                 .padding()
-                .background(Color.red.opacity(0.1))
+                .background(Color.moodAngry.opacity(0.1))
                 .cornerRadius(12)
             }
             
@@ -86,14 +86,14 @@ struct PHQ9ResultView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .background(AppColors.brownDeep)
                     .cornerRadius(12)
             }
             
             Spacer()
         }
         .padding()
-        .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+        .background(AppColors.backgroundLight)
         .navigationTitle("測試結果")
         .navigationBarTitleDisplayMode(.inline)
     }

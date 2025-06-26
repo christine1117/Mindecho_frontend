@@ -63,11 +63,11 @@ struct TherapyModeCard: View {
                     Text(mode.displayName)
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text(mode.description)
                         .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                         .multilineTextAlignment(.leading)
                 }
                 
@@ -86,7 +86,7 @@ struct TherapyModeCard: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(
-                                isSelected ? mode.color : Color.gray.opacity(0.3),
+                                isSelected ? mode.color : Color.grayText.opacity(0.3),
                                 lineWidth: isSelected ? 2 : 1
                             )
                     )
@@ -141,11 +141,11 @@ struct ModeIntroductionView: View {
                     Text(mode.displayName)
                         .font(.title2)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text(mode.description)
                         .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                 }
                 
                 Spacer()
@@ -155,7 +155,7 @@ struct ModeIntroductionView: View {
                 Text("特色功能：")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 
                 ForEach(features, id: \.self) { feature in
                     HStack(spacing: 8) {
@@ -165,7 +165,7 @@ struct ModeIntroductionView: View {
                         
                         Text(feature)
                             .font(.subheadline)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         
                         Spacer()
                     }
@@ -196,11 +196,11 @@ struct ModeChangeConfirmationView: View {
                 Text("切換對話模式")
                     .font(.title2)
                     .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 
                 Text("您想要從 \(currentMode.displayName) 切換到 \(targetMode.displayName) 嗎？")
                     .font(.subheadline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .multilineTextAlignment(.center)
             }
             
@@ -221,12 +221,12 @@ struct ModeChangeConfirmationView: View {
                         
                         Text(currentMode.displayName)
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                     }
                     
                     Image(systemName: "arrow.right")
                         .font(.title3)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                     
                     // 目標模式
                     VStack(spacing: 8) {
@@ -243,13 +243,13 @@ struct ModeChangeConfirmationView: View {
                         
                         Text(targetMode.displayName)
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                     }
                 }
                 
                 Text(targetMode.description)
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
             }
@@ -258,10 +258,10 @@ struct ModeChangeConfirmationView: View {
                 Button("取消", action: onCancel)
                     .font(.subheadline)
                     .fontWeight(.medium)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 12)
-                    .background(Color.gray.opacity(0.1))
+                    .background(Color.grayText.opacity(0.1))
                     .cornerRadius(8)
                 
                 Button("確認切換", action: onConfirm)
@@ -304,5 +304,5 @@ struct ModeChangeConfirmationView: View {
         )
     }
     .padding()
-    .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+    .background(AppColors.backgroundLight)
 }

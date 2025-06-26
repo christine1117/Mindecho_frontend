@@ -27,7 +27,7 @@ struct MonthlyMoodAnalysisView: View {
                             
                             Text("根據你這個月的心情記錄，AI 分析顯示你的整體情緒狀態偏向積極。建議繼續保持良好的生活習慣，適當放鬆心情。")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                                 .multilineTextAlignment(.leading)
                             
                             // 情緒分布圖
@@ -121,7 +121,7 @@ struct CommonWordsAnalysis: View {
             if commonWords.isEmpty {
                 Text("本月還沒有足夠的日記內容進行分析")
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.vertical, 20)
             } else {
@@ -153,7 +153,7 @@ struct CommonWordsAnalysis: View {
                         HStack {
                             Text("\(index + 1).")
                                 .font(.caption2)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                                 .frame(width: 20, alignment: .leading)
                             
                             Text(wordData.0)
@@ -164,7 +164,7 @@ struct CommonWordsAnalysis: View {
                             
                             Text("\(wordData.1)次")
                                 .font(.caption2)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                         }
                     }
                 }
@@ -183,7 +183,7 @@ struct WordTag: View {
         case 1: return AppColors.orange
         case 2: return Color(red: 0.95, green: 0.75, blue: 0.30)
         case 3: return AppColors.mediumBrown
-        default: return Color.gray.opacity(0.6)
+        default: return Color.grayText.opacity(0.6)
         }
     }
     
@@ -288,7 +288,7 @@ struct EmotionDistributionChart: View {
                     
                     Text("\(count)次")
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                 }
                 
                 ProgressView(value: percentage)
@@ -306,7 +306,7 @@ struct MoodTrendChart: View {
         VStack {
             Text("情緒趨勢圖")
                 .font(.caption)
-                .foregroundColor(.gray)
+                .foregroundColor(.grayText)
             
             Rectangle()
                 .fill(AppColors.orange.opacity(0.3))

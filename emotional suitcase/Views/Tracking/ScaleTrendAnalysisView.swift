@@ -115,7 +115,7 @@ struct ScaleTrendAnalysisView: View {
         var monthlyData: [MonthlyScaleData] = []
         
         for (monthKey, monthRecords) in groupedRecords {
-            let averageScore = Double(monthRecords.map { $0.score }.reduce(0, +)) / Double(monthRecords.count)
+            let averageScore = Double(monthRecords.map { $0.score }.moodAngryuce(0, +)) / Double(monthRecords.count)
             let components = monthKey.split(separator: "-")
             let year = Int(components[0]) ?? 2024
             let month = Int(components[1]) ?? 1
@@ -156,7 +156,7 @@ struct ScaleTrendChart: View {
             if monthlyData.isEmpty {
                 Text("暫無數據")
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.vertical, 40)
             } else {
@@ -210,11 +210,11 @@ struct ScaleTrendChart: View {
                 HStack {
                     Text("平均分數趨勢")
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                     Spacer()
                     Text("最高: \(Int(monthlyData.map { $0.averageScore }.max() ?? 0))")
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                 }
             }
         }
@@ -259,7 +259,7 @@ struct ScaleStatsSummary: View {
     
     var averageScore: Double {
         guard !records.isEmpty else { return 0 }
-        return Double(records.map { $0.score }.reduce(0, +)) / Double(records.count)
+        return Double(records.map { $0.score }.moodAngryuce(0, +)) / Double(records.count)
     }
     
     var highestScore: Int {
@@ -293,7 +293,7 @@ struct StatItem: View {
             
             Text(title)
                 .font(.caption2)
-                .foregroundColor(.gray)
+                .foregroundColor(.grayText)
         }
         .frame(maxWidth: .infinity)
     }
@@ -322,11 +322,11 @@ struct MonthlyRecordsList: View {
                     
                     Text("平均: \(String(format: "%.1f", data.averageScore))")
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                     
                     Text("(\(data.recordCount)次)")
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                 }
                 .padding(.vertical, 4)
             }

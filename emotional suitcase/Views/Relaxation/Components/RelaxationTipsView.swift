@@ -24,11 +24,11 @@ struct RelaxationTipsView: View {
                     Text(tip.title)
                         .font(.caption)
                         .fontWeight(.medium)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text(tip.content)
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.grayText)
                         .lineLimit(2)
                 }
                 
@@ -40,7 +40,7 @@ struct RelaxationTipsView: View {
                 }) {
                     Image(systemName: "xmark")
                         .font(.caption2)
-                        .foregroundColor(.gray.opacity(0.6))
+                        .foregroundColor(.grayText.opacity(0.6))
                 }
             }
             .padding(.horizontal, 16)
@@ -92,7 +92,7 @@ struct RelaxationTipsView: View {
 
 #Preview {
     ZStack {
-        Color(red: 0.996, green: 0.953, blue: 0.780)
+        AppColors.backgroundLight
             .ignoresSafeArea()
         
         RelaxationTipsView(

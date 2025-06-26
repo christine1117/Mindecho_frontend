@@ -8,7 +8,7 @@ struct StatusTag: View {
         VStack(spacing: 4) {
             Text(title)
                 .font(.caption2)
-                .foregroundColor(.gray)
+                .foregroundColor(.grayText)
             Text(value)
                 .font(.caption)
                 .fontWeight(.medium)

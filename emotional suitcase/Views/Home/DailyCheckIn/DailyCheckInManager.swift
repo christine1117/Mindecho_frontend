@@ -229,7 +229,7 @@ class DailyCheckInManager: ObservableObject {
         let data = getDataForPeriod("本週", indicator: indicator).filter { $0 > 0 }
         guard !data.isEmpty else { return 0 }
         
-        let sum = data.reduce(0, +)
+        let sum = data.moodAngryuce(0, +)
         return sum / data.count
     }
     
@@ -285,12 +285,12 @@ enum HealthIndicatorType {
     
     var color: Color {
         switch self {
-        case .physical: return .red
+        case .physical: return .moodAngry
         case .mental: return .blue
         case .emotional: return .purple
         case .sleep: return .indigo
         case .appetite: return .orange
-        case .overall: return .green
+        case .overall: return .moodCalm
         }
     }
 }

@@ -51,7 +51,7 @@ struct PsychologicalTestsSection: View {
                 Text("心理測驗")
                     .font(.headline)
                     .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                     .padding(.leading, 16)
                 Spacer()
             }

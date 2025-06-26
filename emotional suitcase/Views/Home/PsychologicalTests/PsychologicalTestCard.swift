@@ -9,38 +9,38 @@ struct PsychologicalTestCard: View {
             HStack {
                 Image(systemName: test.icon)
                     .font(.title2)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 Spacer()
             }
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(test.title)
                     .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                     .multilineTextAlignment(.leading)
                 
                 Text(test.subtitle)
                     .font(.system(size: 11))
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                    .foregroundColor(AppColors.brownDeep.opacity(0.7))
                     .multilineTextAlignment(.leading)
                 
                 HStack(spacing: 12) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(test.duration)
                             .font(.system(size: 10, weight: .medium))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         Text(test.questions)
                             .font(.system(size: 10, weight: .medium))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                     }
                     
                     VStack(alignment: .leading, spacing: 2) {
                         Text("上次測驗")
                             .font(.system(size: 9))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.6))
+                            .foregroundColor(AppColors.brownDeep.opacity(0.6))
                         Text(test.lastTaken)
                             .font(.system(size: 9))
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.6))
+                            .foregroundColor(AppColors.brownDeep.opacity(0.6))
                     }
                 }
                 .padding(.top, 2)
@@ -51,7 +51,7 @@ struct PsychologicalTestCard: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 8)
-                        .background(Color(red: 0.8, green: 0.4, blue: 0.1))
+                        .background(AppColors.orangeMain)
                         .cornerRadius(8)
                 }
                 .padding(.top, 4)

@@ -75,7 +75,7 @@ struct MoodDiaryEditor: View {
                             TextEditor(text: $diaryText)
                                 .frame(minHeight: 200)
                                 .padding(10)
-                                .background(Color.gray.opacity(0.1))
+                                .background(Color.grayText.opacity(0.1))
                                 .cornerRadius(10)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 10)

@@ -28,7 +28,7 @@ struct PersonalInfoCard: View {
                         
                         Text("這是一個屬於你的安全空間，在這裡可以整理情緒、收集力量、找到希望。")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                             .multilineTextAlignment(.leading)
                     }
                 }
@@ -73,7 +73,7 @@ struct PersonalInfoCard: View {
         case "難過":
             return Color.blue
         case "生氣":
-            return Color.red
+            return Color.moodAngry
         case "焦慮":
             return Color.purple
         default:

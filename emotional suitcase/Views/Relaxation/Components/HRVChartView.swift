@@ -12,12 +12,12 @@ struct HRVChartView: View {
                     HStack {
                         HStack(spacing: 8) {
                             Circle()
-                                .fill(Color.green)
+                                .fill(Color.moodCalm)
                                 .frame(width: 8, height: 8)
                             
                             Text(hrvManager.deviceName)
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                         }
                         
                         Spacer()
@@ -25,11 +25,11 @@ struct HRVChartView: View {
                         HStack(spacing: 4) {
                             Image(systemName: "battery.100")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                             
                             Text("\(hrvManager.batteryLevel)%")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                         }
                     }
                     .padding(.horizontal, 16)
@@ -40,13 +40,13 @@ struct HRVChartView: View {
                         VStack(alignment: .leading, spacing: 4) {
                             Text("當前 HRV")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                             
                             HStack(spacing: 8) {
                                 Text(String(format: "%.1f", hrvManager.currentHRV))
                                     .font(.title3)
                                     .fontWeight(.semibold)
-                                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                    .foregroundColor(AppColors.brownDeep)
                                 
                                 HStack(spacing: 4) {
                                     Image(systemName: hrvManager.hrvTrend.icon)
@@ -65,12 +65,12 @@ struct HRVChartView: View {
                         VStack(alignment: .trailing, spacing: 4) {
                             Text("平均值")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                             
                             Text(String(format: "%.1f", hrvManager.averageHRV))
                                 .font(.subheadline)
                                 .fontWeight(.medium)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                         }
                     }
                     .padding(.horizontal, 16)
@@ -86,7 +86,7 @@ struct HRVChartView: View {
                         .fill(Color.white.opacity(0.9))
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                                .stroke(Color.grayText.opacity(0.2), lineWidth: 1)
                         )
                 )
             } else if hrvManager.isConnected {
@@ -94,12 +94,12 @@ struct HRVChartView: View {
                 VStack(spacing: 12) {
                     HStack(spacing: 8) {
                         Circle()
-                            .fill(Color.green)
+                            .fill(Color.moodCalm)
                             .frame(width: 8, height: 8)
                         
                         Text("正在收集數據...")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         
                         Spacer()
                     }
@@ -111,7 +111,7 @@ struct HRVChartView: View {
                         .fill(Color.white.opacity(0.9))
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                                .stroke(Color.grayText.opacity(0.2), lineWidth: 1)
                         )
                 )
             }
@@ -133,7 +133,7 @@ struct HRVLineChart: View {
             if data.isEmpty {
                 Text("暫無數據")
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 ZStack {
@@ -145,7 +145,7 @@ struct HRVLineChart: View {
                         .stroke(
                             LinearGradient(
                                 gradient: Gradient(colors: [
-                                    Color(red: 0.8, green: 0.4, blue: 0.1),
+                                    AppColors.orangeMain,
                                     Color(red: 0.6, green: 0.3, blue: 0.1)
                                 ]),
                                 startPoint: .leading,
@@ -159,8 +159,8 @@ struct HRVLineChart: View {
                         .fill(
                             LinearGradient(
                                 gradient: Gradient(colors: [
-                                    Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.3),
-                                    Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.1)
+                                    AppColors.orangeMain.opacity(0.3),
+                                    AppColors.orangeMain.opacity(0.1)
                                 ]),
                                 startPoint: .top,
                                 endPoint: .bottom
@@ -279,21 +279,21 @@ struct GridBackground: View {
             VStack(spacing: 0) {
                 ForEach(0..<3) { _ in
                     Divider()
-                        .background(Color.gray.opacity(0.2))
+                        .background(Color.grayText.opacity(0.2))
                     Spacer()
                 }
                 Divider()
-                    .background(Color.gray.opacity(0.2))
+                    .background(Color.grayText.opacity(0.2))
             }
             
             HStack(spacing: 0) {
                 ForEach(0..<4) { _ in
                     Divider()
-                        .background(Color.gray.opacity(0.2))
+                        .background(Color.grayText.opacity(0.2))
                     Spacer()
                 }
                 Divider()
-                    .background(Color.gray.opacity(0.2))
+                    .background(Color.grayText.opacity(0.2))
             }
         }
     }
@@ -312,5 +312,5 @@ struct GridBackground: View {
                 HRVManager.shared.connectDevice()
             }
     }
-    .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+    .background(AppColors.backgroundLight)
 }

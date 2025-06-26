@@ -31,11 +31,11 @@ struct ScaleSelectionCard: View {
                     if let record = lastRecord {
                         Text("最近分數: \(record.score)")
                             .font(.caption2)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                     } else {
                         Text("尚未測驗")
                             .font(.caption2)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                     }
                 }
                 .padding(.horizontal)

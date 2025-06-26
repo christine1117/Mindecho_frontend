@@ -12,7 +12,7 @@ struct EmergencyContactCard: View {
             
             Text(contact.phone)
                 .font(.caption)
-                .foregroundColor(.gray)
+                .foregroundColor(.grayText)
             
             Text(contact.relationship)
                 .font(.caption2)

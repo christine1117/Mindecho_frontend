@@ -20,9 +20,9 @@ struct DailyCheckInResultView: View {
     
     private var statusColor: Color {
         switch overallScore {
-        case 80...100: return .green
+        case 80...100: return .moodCalm
         case 60...79: return .orange
-        default: return .red
+        default: return .moodAngry
         }
     }
     
@@ -33,11 +33,11 @@ struct DailyCheckInResultView: View {
                 Text("今日檢測完成！")
                     .font(.title)
                     .fontWeight(.bold)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                    .foregroundColor(AppColors.brownDeep)
                 
                 Text("已記錄到您的健康檔案")
                     .font(.subheadline)
-                    .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                    .foregroundColor(AppColors.brownDeep.opacity(0.7))
             }
             .padding(.top, 32)
             
@@ -50,7 +50,7 @@ struct DailyCheckInResultView: View {
                     Text("今日健康指數")
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     VStack(spacing: 8) {
                         ForEach(getHealthIndicators(), id: \.name) { indicator in
@@ -62,7 +62,7 @@ struct DailyCheckInResultView: View {
                     }
                 }
                 .padding(20)
-                .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+                .background(AppColors.backgroundLight)
                 .cornerRadius(12)
                 
                 // 綜合健康指數
@@ -70,11 +70,11 @@ struct DailyCheckInResultView: View {
                     Text("綜合健康指數")
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     ZStack {
                         Circle()
-                            .stroke(Color.gray.opacity(0.2), lineWidth: 8)
+                            .stroke(Color.grayText.opacity(0.2), lineWidth: 8)
                             .frame(width: 120, height: 120)
                         
                         Circle()
@@ -87,7 +87,7 @@ struct DailyCheckInResultView: View {
                         VStack(spacing: 4) {
                             Text("\(overallScore)")
                                 .font(.system(size: 36, weight: .bold))
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                             
                             Text(healthStatus)
                                 .font(.caption)
@@ -117,13 +117,13 @@ struct DailyCheckInResultView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(Color(red: 0.8, green: 0.4, blue: 0.1))
+                    .background(AppColors.orangeMain)
                     .cornerRadius(12)
             }
             .padding(.horizontal, 32)
             .padding(.bottom, 40)
         }
-        .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+        .background(AppColors.backgroundLight)
         .navigationBarHidden(true)
         .onAppear {
             // 保存數據到 DailyCheckInManager
@@ -151,14 +151,14 @@ struct HealthIndicatorRow: View {
         HStack {
             Text(name)
                 .font(.subheadline)
-                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                .foregroundColor(AppColors.brownDeep)
             
             Spacer()
             
             Text("\(score)")
                 .font(.subheadline)
                 .fontWeight(.semibold)
-                .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                .foregroundColor(AppColors.orangeMain)
         }
         .padding(.vertical, 2)
     }

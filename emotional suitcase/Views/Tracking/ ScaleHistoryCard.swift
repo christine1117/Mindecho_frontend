@@ -23,7 +23,7 @@ struct ScaleHistoryCard: View {
                 // 記錄數量
                 Text("\(records.count)筆")
                     .font(.caption2)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 12)

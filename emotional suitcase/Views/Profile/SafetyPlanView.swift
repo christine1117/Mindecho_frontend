@@ -97,7 +97,7 @@ struct SafetyPlanView: View {
                                         .foregroundColor(AppColors.darkBrown)
                                     Text("1925 (依舊愛我)")
                                         .font(.caption)
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(.grayText)
                                 }
                                 
                                 Spacer()
@@ -255,7 +255,7 @@ struct SafetyContactRow: View {
                     .foregroundColor(AppColors.darkBrown)
                 Text(contact.phone)
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
             }
             
             Spacer()

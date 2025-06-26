@@ -25,20 +25,20 @@ struct GAD7TestView: View {
             } else {
                 VStack(spacing: 20) {
                     ProgressView(value: Double(currentQuestion + 1), total: Double(questions.count))
-                        .progressViewStyle(LinearProgressViewStyle(tint: Color(red: 0.4, green: 0.2, blue: 0.1)))
+                        .progressViewStyle(LinearProgressViewStyle(tint: AppColors.brownDeep))
                     
                     Text("第 \(currentQuestion + 1) 題，共 \(questions.count) 題")
                         .font(.caption)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.7))
+                        .foregroundColor(AppColors.brownDeep.opacity(0.7))
                     
                     VStack(alignment: .leading, spacing: 16) {
                         Text("在過去兩週內，您有多常被以下的問題所困擾：")
                             .font(.subheadline)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         Text(questions[currentQuestion])
                             .font(.headline)
-                            .foregroundColor(.red)
+                            .foregroundColor(.moodAngry)
                             .multilineTextAlignment(.leading)
                     }
                     
@@ -50,11 +50,11 @@ struct GAD7TestView: View {
                                 HStack {
                                     Text(options[index])
                                         .font(.body)
-                                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                        .foregroundColor(AppColors.brownDeep)
                                     Spacer()
                                     Text("(\(index)分)")
                                         .font(.caption)
-                                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1).opacity(0.6))
+                                        .foregroundColor(AppColors.brownDeep.opacity(0.6))
                                 }
                                 .padding()
                                 .background(Color.white)
@@ -67,7 +67,7 @@ struct GAD7TestView: View {
                     Spacer()
                 }
                 .padding()
-                .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+                .background(AppColors.backgroundLight)
                 .navigationTitle("GAD-7 焦慮症篩檢")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: Button("取消") { isPresented = false })
@@ -86,6 +86,6 @@ struct GAD7TestView: View {
     }
     
     private func calculateScore() -> Int {
-        return answers.reduce(0, +)
+        return answers.moodAngryuce(0, +)
     }
 }

@@ -17,7 +17,7 @@ struct BreathingView: View {
             // 背景漸層
             LinearGradient(
                 gradient: Gradient(colors: [
-                    Color(red: 0.996, green: 0.953, blue: 0.780),
+                    AppColors.backgroundLight,
                     breathingManager.currentPhase.color.opacity(0.3)
                 ]),
                 startPoint: .topLeading,
@@ -34,7 +34,7 @@ struct BreathingView: View {
                     }) {
                         Image(systemName: "xmark")
                             .font(.title3)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                             .padding(12)
                             .background(Circle().fill(Color.white.opacity(0.8)))
                     }
@@ -45,11 +45,11 @@ struct BreathingView: View {
                         Text("呼吸練習")
                             .font(.headline)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                         
                         Text(breathingManager.pattern.name)
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                     }
                     
                     Spacer()
@@ -63,7 +63,7 @@ struct BreathingView: View {
                     }) {
                         Image(systemName: timerManager.timerState == .running ? "pause" : "play")
                             .font(.title3)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                             .padding(12)
                             .background(Circle().fill(Color.white.opacity(0.8)))
                     }
@@ -80,7 +80,7 @@ struct BreathingView: View {
                     Text(timerManager.formattedTimeRemaining)
                         .font(.title2)
                         .fontWeight(.medium)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     // 呼吸引導圓圈
                     BreathingGuideView(
@@ -98,7 +98,7 @@ struct BreathingView: View {
                         
                         Text(breathingManager.currentPhase.instruction)
                             .font(.subheadline)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         
                         // 階段倒計時
                         Text(String(format: "%.0f", breathingManager.phaseTimeRemaining))
@@ -123,7 +123,7 @@ struct BreathingView: View {
                             Text("心率變異性")
                                 .font(.subheadline)
                                 .fontWeight(.medium)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                             
                             Spacer()
                             
@@ -134,7 +134,7 @@ struct BreathingView: View {
                             }) {
                                 Image(systemName: "xmark.circle")
                                     .font(.caption)
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(.grayText)
                             }
                             
                             HStack(spacing: 8) {
@@ -144,7 +144,7 @@ struct BreathingView: View {
                                 
                                 Text(hrvManager.hrvTrend.description)
                                     .font(.caption)
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(.grayText)
                             }
                         }
                         
@@ -161,33 +161,33 @@ struct BreathingView: View {
                     VStack(spacing: 4) {
                         Text("呼吸週期")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         Text("\(breathingManager.completedCycles)")
                             .font(.headline)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                     }
                     
                     if showHRV && hrvManager.isConnected {
                         VStack(spacing: 4) {
                             Text("當前HRV")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.grayText)
                             Text(String(format: "%.1f", hrvManager.currentHRV))
                                 .font(.headline)
                                 .fontWeight(.semibold)
-                                .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                                .foregroundColor(AppColors.brownDeep)
                         }
                     }
                     
                     VStack(spacing: 4) {
                         Text("進度")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.grayText)
                         Text(String(format: "%.0f%%", timerManager.progress * 100))
                             .font(.headline)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                            .foregroundColor(AppColors.brownDeep)
                     }
                 }
                 .padding(.bottom, 100) // 給右下角按鈕留空間
@@ -220,8 +220,8 @@ struct BreathingView: View {
                             .padding(.vertical, 12)
                             .background(
                                 RoundedRectangle(cornerRadius: 25)
-                                    .fill(Color(red: 0.8, green: 0.4, blue: 0.1))
-                                    .shadow(color: Color(red: 0.8, green: 0.4, blue: 0.1).opacity(0.4), radius: 8, x: 0, y: 4)
+                                    .fill(AppColors.orangeMain)
+                                    .shadow(color: AppColors.orangeMain.opacity(0.4), radius: 8, x: 0, y: 4)
                             )
                         }
                         .padding(.trailing, 20)
@@ -247,8 +247,8 @@ struct BreathingView: View {
                             .padding(.vertical, 12)
                             .background(
                                 RoundedRectangle(cornerRadius: 25)
-                                    .fill(showHRV ? Color.green : Color(red: 0.8, green: 0.4, blue: 0.1))
-                                    .shadow(color: (showHRV ? Color.green : Color(red: 0.8, green: 0.4, blue: 0.1)).opacity(0.4), radius: 8, x: 0, y: 4)
+                                    .fill(showHRV ? Color.moodCalm : AppColors.orangeMain)
+                                    .shadow(color: (showHRV ? Color.moodCalm : AppColors.orangeMain).opacity(0.4), radius: 8, x: 0, y: 4)
                             )
                         }
                         .padding(.trailing, 20)

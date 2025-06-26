@@ -47,11 +47,11 @@ struct MetricDisplayView: View {
                     HStack(spacing: 2) {
                         Image(systemName: trend > 0 ? "arrow.up" : trend < 0 ? "arrow.down" : "minus")
                             .font(.caption2)
-                            .foregroundColor(trend > 0 ? .green : trend < 0 ? .red : .gray)
+                            .foregroundColor(trend > 0 ? .moodCalm : trend < 0 ? .moodAngry : .grayText)
                         
                         Text("\(abs(trend), specifier: "%.1f")%")
                             .font(.caption2)
-                            .foregroundColor(trend > 0 ? .green : trend < 0 ? .red : .gray)
+                            .foregroundColor(trend > 0 ? .moodCalm : trend < 0 ? .moodAngry : .grayText)
                     }
                 }
             }
@@ -65,7 +65,7 @@ struct MetricDisplayView: View {
                 
                 Text(unit)
                     .font(.caption)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.grayText)
                 
                 Spacer()
             }
@@ -125,7 +125,7 @@ struct MiniTrendLine: View {
             unit: "ms",
             icon: "heart.fill",
             trendValue: 2.3,
-            accentColor: .red
+            accentColor: .moodAngry
         )
         
         MetricDisplayView(
@@ -143,7 +143,7 @@ struct MiniTrendLine: View {
             unit: "步",
             icon: "figure.walk",
             trendValue: 5.7,
-            accentColor: .green
+            accentColor: .moodCalm
         )
         
         MetricDisplayView(

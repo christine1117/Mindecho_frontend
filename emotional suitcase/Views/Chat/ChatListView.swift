@@ -28,7 +28,7 @@ struct ChatListView: View {
                     Text("聊天紀錄")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Spacer()
                     
@@ -42,7 +42,7 @@ struct ChatListView: View {
                                 .font(.subheadline)
                                 .fontWeight(.medium)
                         }
-                        .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                        .foregroundColor(AppColors.orangeMain)
                     }
                 }
                 .padding(.horizontal, 20)
@@ -51,14 +51,14 @@ struct ChatListView: View {
                 // 搜尋框
                 HStack {
                     Image(systemName: "magnifyingglass")
-                        .foregroundColor(.gray)
+                        .foregroundColor(AppColors.grayTextText)
                     
                     TextField("搜尋對話...", text: $searchText)
                         .textFieldStyle(PlainTextFieldStyle())
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 12)
-                .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+                .background(AppColors.backgroundLight)
                 .cornerRadius(12)
                 .padding(.horizontal, 20)
                 .padding(.top, 16)
@@ -90,7 +90,7 @@ struct ChatListView: View {
                                     }) {
                                         Label("編輯", systemImage: "pencil")
                                     }
-                                    .tint(.blue)
+                                    .tint(AppColors.orangeMain)
                                 }
                                 .contextMenu {
                                     Button(action: {
@@ -127,7 +127,7 @@ struct ChatListView: View {
                 
                 Spacer()
             }
-            .background(Color.white)
+            .background(AppColors.white)
             .sheet(isPresented: $showingNewChat) {
                 NewChatView(
                     isPresented: $showingNewChat,
@@ -208,19 +208,19 @@ struct ChatListItemView: View {
                     Text(session.title)
                         .font(.headline)
                         .fontWeight(.medium)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                         .lineLimit(1)
                     
                     Spacer()
                     
                     Text(formatDate(session.lastUpdated))
                         .font(.caption)
-                        .foregroundColor(.gray)
+                        .foregroundColor(AppColors.grayTextText)
                 }
                 
                 Text(session.lastMessage)
                     .font(.subheadline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(AppColors.grayTextText)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
                 
@@ -231,15 +231,15 @@ struct ChatListItemView: View {
                                 .font(.caption)
                                 .padding(.horizontal, 8)
                                 .padding(.vertical, 4)
-                                .background(Color(red: 0.996, green: 0.953, blue: 0.780))
-                                .foregroundColor(Color(red: 0.8, green: 0.4, blue: 0.1))
+                                .background(AppColors.backgroundLight)
+                                .foregroundColor(AppColors.brownDeep)
                                 .cornerRadius(8)
                         }
                         
                         if session.tags.count > 2 {
                             Text("+\(session.tags.count - 2)")
                                 .font(.caption)
-                                .foregroundColor(.gray)
+                                .foregroundColor(AppColors.grayTextText)
                         }
                         
                         Spacer()
@@ -250,7 +250,7 @@ struct ChatListItemView: View {
             
             Image(systemName: "chevron.right")
                 .font(.caption)
-                .foregroundColor(.gray.opacity(0.6))
+                .foregroundColor(AppColors.grayTextText.opacity(0.6))
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 12)
@@ -290,15 +290,15 @@ struct EmptyChatState: View {
             VStack(spacing: 16) {
                 Image(systemName: "bubble.left.and.bubble.right")
                     .font(.system(size: 64))
-                    .foregroundColor(.gray.opacity(0.6))
+                    .foregroundColor(AppColors.grayTextText.opacity(0.6))
                 
                 Text("還沒有聊天紀錄")
                     .font(.headline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(AppColors.grayTextText)
                 
                 Text("開始您的第一次心靈對話")
                     .font(.subheadline)
-                    .foregroundColor(.gray.opacity(0.8))
+                    .foregroundColor(AppColors.grayTextText.opacity(0.8))
             }
             
             Button(action: onNewChat) {
@@ -307,10 +307,10 @@ struct EmptyChatState: View {
                     Text("開始新對話")
                 }
                 .font(.headline)
-                .foregroundColor(.white)
+                .foregroundColor(AppColors.white)
                 .padding(.horizontal, 24)
                 .padding(.vertical, 12)
-                .background(Color(red: 0.8, green: 0.4, blue: 0.1))
+                .background(AppColors.orangeMain)
                 .cornerRadius(25)
             }
             
@@ -333,11 +333,11 @@ struct NewChatView: View {
                     Text("選擇對話模式")
                         .font(.title2)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text("選擇最適合您當前需求的對話方式")
                         .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .foregroundColor(AppColors.grayTextText)
                         .multilineTextAlignment(.center)
                 }
                 .padding(.top, 32)
@@ -365,16 +365,16 @@ struct NewChatView: View {
                     Text("開始對話")
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundColor(.white)
+                        .foregroundColor(AppColors.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color(red: 0.8, green: 0.4, blue: 0.1))
+                        .background(AppColors.orangeMain)
                         .cornerRadius(12)
                 }
                 .padding(.horizontal, 20)
                 .padding(.bottom, 32)
             }
-            .background(Color(red: 0.996, green: 0.953, blue: 0.780))
+            .background(AppColors.backgroundLight)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 leading: Button("取消") { isPresented = false }
@@ -408,11 +408,11 @@ struct TherapyModeSelectionCard: View {
                     Text(mode.displayName)
                         .font(.headline)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color(red: 0.4, green: 0.2, blue: 0.1))
+                        .foregroundColor(AppColors.brownDeep)
                     
                     Text(mode.description)
                         .font(.subheadline)
-                        .foregroundColor(.gray)
+                        .foregroundColor(AppColors.grayTextText)
                         .multilineTextAlignment(.leading)
                 }
                 
@@ -427,11 +427,11 @@ struct TherapyModeSelectionCard: View {
             .padding(16)
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.white)
+                    .fill(AppColors.white)
                     .overlay(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(
-                                isSelected ? mode.color : Color.gray.opacity(0.3),
+                                isSelected ? mode.color : AppColors.grayTextText.opacity(0.3),
                                 lineWidth: isSelected ? 2 : 1
                             )
                     )
