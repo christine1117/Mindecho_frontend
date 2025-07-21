@@ -14,6 +14,17 @@
 		956E29D92E2D2A9B00DEC7A6 /* mindechoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E29D82E2D2A9B00DEC7A6 /* mindechoTests.swift */; };
 		956E29E32E2D2A9B00DEC7A6 /* mindechoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E29E22E2D2A9B00DEC7A6 /* mindechoUITests.swift */; };
 		956E29E52E2D2A9B00DEC7A6 /* mindechoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E29E42E2D2A9B00DEC7A6 /* mindechoUITestsLaunchTests.swift */; };
+		956E29F32E2D352F00DEC7A6 /* chatmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E29F22E2D352F00DEC7A6 /* chatmodel.swift */; };
+		956E29FD2E2D3CB400DEC7A6 /* chatapi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E29FC2E2D3CB400DEC7A6 /* chatapi.swift */; };
+		956E29FF2E2D3CBE00DEC7A6 /* chathook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E29FE2E2D3CBE00DEC7A6 /* chathook.swift */; };
+		956E2A012E2D3CCA00DEC7A6 /* chatlistpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A002E2D3CCA00DEC7A6 /* chatlistpage.swift */; };
+		956E2A042E2D3CE200DEC7A6 /* chatdetailpage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A032E2D3CE200DEC7A6 /* chatdetailpage.swift */; };
+		956E2A062E2D3CF500DEC7A6 /* chatbubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A052E2D3CF500DEC7A6 /* chatbubble.swift */; };
+		956E2A082E2D3D0000DEC7A6 /* messageinput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A072E2D3D0000DEC7A6 /* messageinput.swift */; };
+		956E2A0A2E2D3D0D00DEC7A6 /* typingindicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A092E2D3D0D00DEC7A6 /* typingindicator.swift */; };
+		956E2A0C2E2D3D1F00DEC7A6 /* therapymodecomponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A0B2E2D3D1F00DEC7A6 /* therapymodecomponents.swift */; };
+		956E2A0E2E2D3D2900DEC7A6 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A0D2E2D3D2900DEC7A6 /* colors.swift */; };
+		956E2A102E2D421C00DEC7A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A0F2E2D421C00DEC7A6 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,17 @@
 		956E29DE2E2D2A9B00DEC7A6 /* mindechoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mindechoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		956E29E22E2D2A9B00DEC7A6 /* mindechoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindechoUITests.swift; sourceTree = "<group>"; };
 		956E29E42E2D2A9B00DEC7A6 /* mindechoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindechoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		956E29F22E2D352F00DEC7A6 /* chatmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatmodel.swift; sourceTree = "<group>"; };
+		956E29FC2E2D3CB400DEC7A6 /* chatapi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatapi.swift; sourceTree = "<group>"; };
+		956E29FE2E2D3CBE00DEC7A6 /* chathook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chathook.swift; sourceTree = "<group>"; };
+		956E2A002E2D3CCA00DEC7A6 /* chatlistpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatlistpage.swift; sourceTree = "<group>"; };
+		956E2A032E2D3CE200DEC7A6 /* chatdetailpage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatdetailpage.swift; sourceTree = "<group>"; };
+		956E2A052E2D3CF500DEC7A6 /* chatbubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatbubble.swift; sourceTree = "<group>"; };
+		956E2A072E2D3D0000DEC7A6 /* messageinput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageinput.swift; sourceTree = "<group>"; };
+		956E2A092E2D3D0D00DEC7A6 /* typingindicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typingindicator.swift; sourceTree = "<group>"; };
+		956E2A0B2E2D3D1F00DEC7A6 /* therapymodecomponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = therapymodecomponents.swift; sourceTree = "<group>"; };
+		956E2A0D2E2D3D2900DEC7A6 /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		956E2A0F2E2D421C00DEC7A6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +116,14 @@
 		956E29C62E2D2A9700DEC7A6 /* mindecho */ = {
 			isa = PBXGroup;
 			children = (
+				956E29FB2E2D3C7700DEC7A6 /* pages */,
+				956E29FA2E2D3C6300DEC7A6 /* hooks */,
+				956E29F92E2D3C5E00DEC7A6 /* auth */,
+				956E29F82E2D3C5400DEC7A6 /* components */,
+				956E29F72E2D3C4000DEC7A6 /* utils */,
+				956E29F52E2D3C2600DEC7A6 /* API */,
+				956E29F42E2D3BF400DEC7A6 /* styles */,
+				956E29F12E2D352200DEC7A6 /* models */,
 				956E29C72E2D2A9700DEC7A6 /* mindechoApp.swift */,
 				956E29C92E2D2A9700DEC7A6 /* ContentView.swift */,
 				956E29CB2E2D2A9B00DEC7A6 /* Assets.xcassets */,
@@ -125,6 +155,73 @@
 				956E29E42E2D2A9B00DEC7A6 /* mindechoUITestsLaunchTests.swift */,
 			);
 			path = mindechoUITests;
+			sourceTree = "<group>";
+		};
+		956E29F12E2D352200DEC7A6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				956E29F22E2D352F00DEC7A6 /* chatmodel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		956E29F42E2D3BF400DEC7A6 /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				956E2A0D2E2D3D2900DEC7A6 /* colors.swift */,
+			);
+			path = styles;
+			sourceTree = "<group>";
+		};
+		956E29F52E2D3C2600DEC7A6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				956E29FC2E2D3CB400DEC7A6 /* chatapi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		956E29F72E2D3C4000DEC7A6 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				956E2A0F2E2D421C00DEC7A6 /* Extensions.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		956E29F82E2D3C5400DEC7A6 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				956E2A052E2D3CF500DEC7A6 /* chatbubble.swift */,
+				956E2A072E2D3D0000DEC7A6 /* messageinput.swift */,
+				956E2A092E2D3D0D00DEC7A6 /* typingindicator.swift */,
+				956E2A0B2E2D3D1F00DEC7A6 /* therapymodecomponents.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		956E29F92E2D3C5E00DEC7A6 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		956E29FA2E2D3C6300DEC7A6 /* hooks */ = {
+			isa = PBXGroup;
+			children = (
+				956E29FE2E2D3CBE00DEC7A6 /* chathook.swift */,
+			);
+			path = hooks;
+			sourceTree = "<group>";
+		};
+		956E29FB2E2D3C7700DEC7A6 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				956E2A002E2D3CCA00DEC7A6 /* chatlistpage.swift */,
+				956E2A032E2D3CE200DEC7A6 /* chatdetailpage.swift */,
+			);
+			path = pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +354,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956E2A0C2E2D3D1F00DEC7A6 /* therapymodecomponents.swift in Sources */,
+				956E2A0E2E2D3D2900DEC7A6 /* colors.swift in Sources */,
+				956E2A012E2D3CCA00DEC7A6 /* chatlistpage.swift in Sources */,
+				956E2A042E2D3CE200DEC7A6 /* chatdetailpage.swift in Sources */,
 				956E29CA2E2D2A9700DEC7A6 /* ContentView.swift in Sources */,
 				956E29C82E2D2A9700DEC7A6 /* mindechoApp.swift in Sources */,
+				956E2A0A2E2D3D0D00DEC7A6 /* typingindicator.swift in Sources */,
+				956E2A082E2D3D0000DEC7A6 /* messageinput.swift in Sources */,
+				956E2A102E2D421C00DEC7A6 /* Extensions.swift in Sources */,
+				956E29FD2E2D3CB400DEC7A6 /* chatapi.swift in Sources */,
+				956E29FF2E2D3CBE00DEC7A6 /* chathook.swift in Sources */,
+				956E29F32E2D352F00DEC7A6 /* chatmodel.swift in Sources */,
+				956E2A062E2D3CF500DEC7A6 /* chatbubble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
