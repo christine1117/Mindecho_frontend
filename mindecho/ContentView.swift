@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var authService = AuthService.shared
     @State private var selectedTab = 0
     
     var body: some View {
+        Group {
+            if authService.isAuthenticated {
+                // 已登錄 - 顯示你原本的 TabView
+                mainTabView
+            } else {
+                // 未登錄 - 顯示歡迎頁面
+                WelcomePage()
+            }
+        }
+    }
+    
+    // MARK: - TabView
+    private var mainTabView: some View {
         TabView(selection: $selectedTab) {
             // 首頁
             DevelopingView(pageName: "首頁")
@@ -103,6 +117,14 @@ struct DevelopingView: View {
                 Text("請點擊下方「聊天」頁籤")
                     .font(.caption)
                     .foregroundColor(.gray)
+                
+                // 🎯 臨時測試：長按 5 秒直接登出
+                Text("長按此處 5 秒可登出")
+                    .font(.caption2)
+                    .foregroundColor(.red.opacity(0.7))
+                    .onLongPressGesture(minimumDuration: 5.0) {
+                        AuthService.shared.logout()
+                    }
             }
             .padding(.bottom, 40)
         }

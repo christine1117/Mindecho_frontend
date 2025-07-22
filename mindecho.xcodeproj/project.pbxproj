@@ -25,6 +25,20 @@
 		956E2A0C2E2D3D1F00DEC7A6 /* therapymodecomponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A0B2E2D3D1F00DEC7A6 /* therapymodecomponents.swift */; };
 		956E2A0E2E2D3D2900DEC7A6 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A0D2E2D3D2900DEC7A6 /* colors.swift */; };
 		956E2A102E2D421C00DEC7A6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A0F2E2D421C00DEC7A6 /* Extensions.swift */; };
+		956E2A122E2F5E2C00DEC7A6 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A112E2F5E2C00DEC7A6 /* WelcomePage.swift */; };
+		956E2A142E2F602600DEC7A6 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A132E2F602600DEC7A6 /* LoginPage.swift */; };
+		956E2A162E2F605A00DEC7A6 /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A152E2F605A00DEC7A6 /* RegisterPage.swift */; };
+		956E2A182E2F618B00DEC7A6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A172E2F618B00DEC7A6 /* Validation.swift */; };
+		956E2A1A2E2F61AD00DEC7A6 /* AuthConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A192E2F61AD00DEC7A6 /* AuthConstants.swift */; };
+		956E2A1C2E2F61CF00DEC7A6 /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A1B2E2F61CF00DEC7A6 /* AuthModels.swift */; };
+		956E2A1E2E2F61DB00DEC7A6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A1D2E2F61DB00DEC7A6 /* AuthService.swift */; };
+		956E2A202E2F61E900DEC7A6 /* useAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A1F2E2F61E900DEC7A6 /* useAuth.swift */; };
+		956E2A262E2F624E00DEC7A6 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A252E2F624E00DEC7A6 /* AuthTextField.swift */; };
+		956E2A282E2F625A00DEC7A6 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A272E2F625A00DEC7A6 /* AuthButton.swift */; };
+		956E2A2A2E2F626A00DEC7A6 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A292E2F626A00DEC7A6 /* LoadingView.swift */; };
+		956E2A2C2E2F627800DEC7A6 /* ValidationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A2B2E2F627800DEC7A6 /* ValidationMessage.swift */; };
+		956E2A322E2F635E00DEC7A6 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A312E2F635E00DEC7A6 /* AuthAPI.swift */; };
+		956E2A352E2FB04500DEC7A6 /* auth_development.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956E2A342E2FB04500DEC7A6 /* auth_development.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +80,21 @@
 		956E2A0B2E2D3D1F00DEC7A6 /* therapymodecomponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = therapymodecomponents.swift; sourceTree = "<group>"; };
 		956E2A0D2E2D3D2900DEC7A6 /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 		956E2A0F2E2D421C00DEC7A6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		956E2A112E2F5E2C00DEC7A6 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		956E2A132E2F602600DEC7A6 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		956E2A152E2F605A00DEC7A6 /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
+		956E2A172E2F618B00DEC7A6 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		956E2A192E2F61AD00DEC7A6 /* AuthConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthConstants.swift; sourceTree = "<group>"; };
+		956E2A1B2E2F61CF00DEC7A6 /* AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModels.swift; sourceTree = "<group>"; };
+		956E2A1D2E2F61DB00DEC7A6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		956E2A1F2E2F61E900DEC7A6 /* useAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = useAuth.swift; sourceTree = "<group>"; };
+		956E2A252E2F624E00DEC7A6 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		956E2A272E2F625A00DEC7A6 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		956E2A292E2F626A00DEC7A6 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		956E2A2B2E2F627800DEC7A6 /* ValidationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationMessage.swift; sourceTree = "<group>"; };
+		956E2A312E2F635E00DEC7A6 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		956E2A332E2F85FA00DEC7A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		956E2A342E2FB04500DEC7A6 /* auth_development.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auth_development.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +145,7 @@
 		956E29C62E2D2A9700DEC7A6 /* mindecho */ = {
 			isa = PBXGroup;
 			children = (
+				956E2A332E2F85FA00DEC7A6 /* Info.plist */,
 				956E29FB2E2D3C7700DEC7A6 /* pages */,
 				956E29FA2E2D3C6300DEC7A6 /* hooks */,
 				956E29F92E2D3C5E00DEC7A6 /* auth */,
@@ -160,6 +190,7 @@
 		956E29F12E2D352200DEC7A6 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				956E2A1B2E2F61CF00DEC7A6 /* AuthModels.swift */,
 				956E29F22E2D352F00DEC7A6 /* chatmodel.swift */,
 			);
 			path = models;
@@ -177,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				956E29FC2E2D3CB400DEC7A6 /* chatapi.swift */,
+				956E2A312E2F635E00DEC7A6 /* AuthAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -185,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				956E2A0F2E2D421C00DEC7A6 /* Extensions.swift */,
+				956E2A172E2F618B00DEC7A6 /* Validation.swift */,
+				956E2A192E2F61AD00DEC7A6 /* AuthConstants.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -192,10 +226,8 @@
 		956E29F82E2D3C5400DEC7A6 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				956E2A052E2D3CF500DEC7A6 /* chatbubble.swift */,
-				956E2A072E2D3D0000DEC7A6 /* messageinput.swift */,
-				956E2A092E2D3D0D00DEC7A6 /* typingindicator.swift */,
-				956E2A0B2E2D3D1F00DEC7A6 /* therapymodecomponents.swift */,
+				956E2A2E2E2F62F700DEC7A6 /* Chat */,
+				956E2A2D2E2F628000DEC7A6 /* Auth */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -203,6 +235,7 @@
 		956E29F92E2D3C5E00DEC7A6 /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				956E2A1D2E2F61DB00DEC7A6 /* AuthService.swift */,
 			);
 			path = auth;
 			sourceTree = "<group>";
@@ -211,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				956E29FE2E2D3CBE00DEC7A6 /* chathook.swift */,
+				956E2A1F2E2F61E900DEC7A6 /* useAuth.swift */,
+				956E2A342E2FB04500DEC7A6 /* auth_development.swift */,
 			);
 			path = hooks;
 			sourceTree = "<group>";
@@ -218,10 +253,51 @@
 		956E29FB2E2D3C7700DEC7A6 /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				956E2A302E2F631900DEC7A6 /* Auth */,
+				956E2A2F2E2F631200DEC7A6 /* Chat */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		956E2A2D2E2F628000DEC7A6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				956E2A2B2E2F627800DEC7A6 /* ValidationMessage.swift */,
+				956E2A252E2F624E00DEC7A6 /* AuthTextField.swift */,
+				956E2A272E2F625A00DEC7A6 /* AuthButton.swift */,
+				956E2A292E2F626A00DEC7A6 /* LoadingView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		956E2A2E2E2F62F700DEC7A6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				956E2A052E2D3CF500DEC7A6 /* chatbubble.swift */,
+				956E2A072E2D3D0000DEC7A6 /* messageinput.swift */,
+				956E2A092E2D3D0D00DEC7A6 /* typingindicator.swift */,
+				956E2A0B2E2D3D1F00DEC7A6 /* therapymodecomponents.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		956E2A2F2E2F631200DEC7A6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
 				956E2A002E2D3CCA00DEC7A6 /* chatlistpage.swift */,
 				956E2A032E2D3CE200DEC7A6 /* chatdetailpage.swift */,
 			);
-			path = pages;
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		956E2A302E2F631900DEC7A6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				956E2A112E2F5E2C00DEC7A6 /* WelcomePage.swift */,
+				956E2A132E2F602600DEC7A6 /* LoginPage.swift */,
+				956E2A152E2F605A00DEC7A6 /* RegisterPage.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,18 +431,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				956E2A0C2E2D3D1F00DEC7A6 /* therapymodecomponents.swift in Sources */,
+				956E2A282E2F625A00DEC7A6 /* AuthButton.swift in Sources */,
 				956E2A0E2E2D3D2900DEC7A6 /* colors.swift in Sources */,
 				956E2A012E2D3CCA00DEC7A6 /* chatlistpage.swift in Sources */,
 				956E2A042E2D3CE200DEC7A6 /* chatdetailpage.swift in Sources */,
 				956E29CA2E2D2A9700DEC7A6 /* ContentView.swift in Sources */,
+				956E2A2C2E2F627800DEC7A6 /* ValidationMessage.swift in Sources */,
 				956E29C82E2D2A9700DEC7A6 /* mindechoApp.swift in Sources */,
 				956E2A0A2E2D3D0D00DEC7A6 /* typingindicator.swift in Sources */,
+				956E2A1E2E2F61DB00DEC7A6 /* AuthService.swift in Sources */,
 				956E2A082E2D3D0000DEC7A6 /* messageinput.swift in Sources */,
 				956E2A102E2D421C00DEC7A6 /* Extensions.swift in Sources */,
+				956E2A1A2E2F61AD00DEC7A6 /* AuthConstants.swift in Sources */,
+				956E2A182E2F618B00DEC7A6 /* Validation.swift in Sources */,
 				956E29FD2E2D3CB400DEC7A6 /* chatapi.swift in Sources */,
+				956E2A322E2F635E00DEC7A6 /* AuthAPI.swift in Sources */,
+				956E2A352E2FB04500DEC7A6 /* auth_development.swift in Sources */,
 				956E29FF2E2D3CBE00DEC7A6 /* chathook.swift in Sources */,
+				956E2A262E2F624E00DEC7A6 /* AuthTextField.swift in Sources */,
+				956E2A122E2F5E2C00DEC7A6 /* WelcomePage.swift in Sources */,
+				956E2A2A2E2F626A00DEC7A6 /* LoadingView.swift in Sources */,
 				956E29F32E2D352F00DEC7A6 /* chatmodel.swift in Sources */,
+				956E2A142E2F602600DEC7A6 /* LoginPage.swift in Sources */,
+				956E2A202E2F61E900DEC7A6 /* useAuth.swift in Sources */,
 				956E2A062E2D3CF500DEC7A6 /* chatbubble.swift in Sources */,
+				956E2A1C2E2F61CF00DEC7A6 /* AuthModels.swift in Sources */,
+				956E2A162E2F605A00DEC7A6 /* RegisterPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +622,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"mindecho/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mindecho/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -560,6 +651,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"mindecho/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = mindecho/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
